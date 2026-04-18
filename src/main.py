@@ -8,9 +8,8 @@ Steps:
   4. Score remaining jobs.
   5. Drop anything we've already seen.
   6. Take the top N.
-  7. Enrich with company-review snippets.
-  8. Format and push to Telegram (or dry-run print).
-  9. Save "seen" state.
+  7. Format and push to Telegram (or dry-run print).
+  8. Save "seen" state.
 
 CLI:
   python -m src.main                 # normal run, uses env vars
@@ -31,7 +30,6 @@ import yaml
 
 from .matching import Job, passes_filter, score_job
 from .notifier import format_job, pack_into_messages, send
-from .reviews import fetch_reviews
 from .scrapers import (
     remoteok,
     remotive,
@@ -39,7 +37,8 @@ from .scrapers import (
     workingnomads,
     hackernews,
     ycombinator,
-    linkedin_indeed,
+    greenhouse,
+    lever,
 )
 from .state import SeenStore
 
@@ -67,7 +66,8 @@ SCRAPERS = [
     ("workingnomads", workingnomads.fetch),
     ("hn_hiring", hackernews.fetch),
     ("yc", ycombinator.fetch),
-    ("linkedin_indeed", linkedin_indeed.fetch),
+    ("greenhouse", greenhouse.fetch),
+    ("lever", lever.fetch),
 ]
 
 
@@ -152,13 +152,7 @@ def build_messages(top: list[dict], collected: int, after_filter: int, cfg: dict
     blocks: list[str] = []
     for item in top:
         j: Job = item["job"]
-        logging.info("enriching reviews for %s (%s)", j.company, j.source)
-        try:
-            reviews = fetch_reviews(j.company, cfg) if j.company else []
-        except Exception as e:
-            logging.warning("reviews fetch failed for %s: %s", j.company, e)
-            reviews = []
-        blocks.append(format_job(j, item["score"], item["reasons"], reviews))
+        blocks.append(format_job(j, item["score"], item["reasons"]))
 
     footer = "— end —"
     return pack_into_messages(header, blocks, footer)

@@ -1,9 +1,8 @@
 # Android Job Scout
 
 A GitHub Actions + Python workflow that hunts remote Senior/Lead Android Engineer
-roles every morning, scores them against Valerian Demichev's CV, fetches public
-employee feedback from Reddit and HackerNews, and pushes the top matches to
-Telegram.
+roles every morning, scores them against Valerian Demichev's CV, and pushes the
+top matches to Telegram.
 
 ## What it does
 
@@ -16,7 +15,7 @@ Every day at **08:00 UTC** (10:00/11:00 Europe/Sofia), the workflow:
    - Working Nomads (JSON API)
    - HackerNews "Ask HN: Who is hiring?" (current month)
    - Y Combinator "Work at a Startup" (HTML)
-   - LinkedIn guest search + Indeed (best-effort, often rate-limited)
+   - Curated company list via Greenhouse + Lever public APIs (`companies.yaml`)
 2. Hard-filters on:
    - Title contains `android` / `mobile` / `kotlin`, excludes junior/intern/React Native/iOS/etc.
    - Remote-friendly location (worldwide / Europe / EMEA) — no US-only roles
@@ -24,11 +23,8 @@ Every day at **08:00 UTC** (10:00/11:00 Europe/Sofia), the workflow:
 3. Scores each match against CV-specific signals (Kotlin, Jetpack Compose,
    Clean Architecture, Dagger/Hilt, fintech, multi-module, CI/CD modernization…).
 4. Dedups against `data/seen.json` so you don't get spammed with the same roles.
-5. Fetches company-feedback snippets from Reddit and HackerNews — short quotes
-   with links to the full threads, so you can sanity-check a company before
-   applying.
-6. Delivers the top 10 new matches to your Telegram chat as formatted messages.
-7. Commits the updated seen-state back to the repo so dedup persists across runs.
+5. Delivers the top 10 new matches to your Telegram chat as formatted messages.
+6. Commits the updated seen-state back to the repo so dedup persists across runs.
 
 ## Setup
 
@@ -104,13 +100,11 @@ Edit `config.yaml` to tune:
   goal is a high-paying role that doesn't downgrade based on Bulgaria location.
 - **Location-aware**: the filter requires explicit worldwide / Europe / EMEA
   allowance, and drops listings scoped to "US only" or "Canada only".
-- **No paid APIs**: LinkedIn and Indeed are best-effort only since both
-  aggressively block scraping. The remote-first boards (RemoteOK, Remotive,
-  WWR, Working Nomads) are the main signal; HN "Who is hiring?" is
-  surprisingly good for high-comp roles with transparent salaries.
-- **Review signal**: Glassdoor is behind strong anti-bot walls, so we use
-  Reddit + HN mentions instead. These are often higher-signal than
-  Glassdoor anyway — first-hand engineering-culture commentary.
+- **No paid APIs**: aggregator boards (RemoteOK, Remotive, WWR, Working
+  Nomads) plus HN "Who is hiring?" provide broad coverage. The curated
+  `companies.yaml` (Greenhouse + Lever public APIs) provides high-signal
+  coverage of vetted product companies that are known to pay well and
+  hire Android engineers — no scraping defenses to deal with.
 - **Dedup**: persistent `data/seen.json` committed back to the repo,
   so the workflow is stateful across runs without needing external storage.
 
@@ -120,11 +114,11 @@ Edit `config.yaml` to tune:
 .
 ├── .github/workflows/daily-job-search.yml  # daily cron + manual dispatch
 ├── config.yaml                             # profile-tuned filter/scoring config
+├── companies.yaml                          # curated Greenhouse/Lever slugs
 ├── requirements.txt
 ├── src/
 │   ├── main.py                             # orchestrator
 │   ├── matching.py                         # scoring & filtering
-│   ├── reviews.py                          # Reddit + HN company feedback
 │   ├── notifier.py                         # Telegram sender
 │   ├── state.py                            # seen-jobs dedup
 │   └── scrapers/
@@ -134,7 +128,8 @@ Edit `config.yaml` to tune:
 │       ├── workingnomads.py
 │       ├── hackernews.py
 │       ├── ycombinator.py
-│       └── linkedin_indeed.py
+│       ├── greenhouse.py                   # curated companies on Greenhouse
+│       └── lever.py                        # curated companies on Lever
 └── data/
     └── seen.json                           # committed by the workflow
 ```

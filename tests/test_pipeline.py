@@ -14,7 +14,6 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")
 import yaml
 from src.matching import Job, extract_salary_usd, passes_filter, score_job
 from src.notifier import format_job, pack_into_messages
-from src.reviews import ReviewSnippet
 from src.state import SeenStore
 
 
@@ -111,17 +110,7 @@ def test_formatter():
         salary_min=150_000, salary_max=200_000,
     )
     s, reasons = score_job(j, cfg)
-    reviews = [
-        ReviewSnippet(source="reddit", title="Anyone work at Acme Fintech?",
-                      url="https://reddit.com/r/androiddev/x",
-                      excerpt="Culture is good, pay is transparent, real remote.",
-                      score=42, subreddit_or_tag="androiddev"),
-        ReviewSnippet(source="hn", title="Acme Fintech Series B",
-                      url="https://news.ycombinator.com/item?id=1",
-                      excerpt="Interviewed here last month — clean codebase, modern stack.",
-                      score=15, subreddit_or_tag="hn"),
-    ]
-    block = format_job(j, s, reasons, reviews)
+    block = format_job(j, s, reasons)
     print("  formatted block:")
     for line in block.splitlines():
         print(f"    {line}")

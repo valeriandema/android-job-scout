@@ -16,7 +16,6 @@ from typing import Optional
 import requests
 
 from .matching import Job
-from .reviews import ReviewSnippet
 
 log = logging.getLogger(__name__)
 
@@ -39,8 +38,8 @@ def _format_salary(job: Job) -> str:
     return "salary not disclosed"
 
 
-def format_job(job: Job, score: int, reasons: list[str], reviews: list[ReviewSnippet]) -> str:
-    """Format a single job + its reviews as a Telegram HTML chunk."""
+def format_job(job: Job, score: int, reasons: list[str]) -> str:
+    """Format a single job as a Telegram HTML chunk."""
     head = (
         f"<b>{_e(job.title)}</b>\n"
         f"🏢 {_e(job.company or '—')}  ·  📍 {_e(job.location or 'Remote')}\n"
@@ -52,15 +51,6 @@ def format_job(job: Job, score: int, reasons: list[str], reviews: list[ReviewSni
         top_reasons = ", ".join(reasons[:4])
         head += f"\n🎯 <i>{_e(top_reasons)}</i>"
 
-    if reviews:
-        head += "\n\n<b>Company feedback</b>"
-        for rv in reviews[:3]:
-            icon = "🟠" if rv.source == "reddit" else "🟡"
-            tag = _e(rv.subreddit_or_tag or rv.source)
-            head += (
-                f"\n{icon} <a href=\"{_e(rv.url)}\">[{tag}]</a> "
-                f"{_e(rv.excerpt)}"
-            )
     return head
 
 

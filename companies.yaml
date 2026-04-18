@@ -1,0 +1,55 @@
+# Curated list of product companies known to hire Android engineers
+# at Senior/Lead level, with competitive comp and remote-friendly policies.
+#
+# Format: each entry has the ATS slug used in the public board URL.
+#   greenhouse: https://boards-api.greenhouse.io/v1/boards/<slug>/jobs
+#   lever:      https://api.lever.co/v0/postings/<slug>?mode=json
+#
+# To add a company: visit their careers page, look at the URL/network tab.
+#   - jobs.lever.co/<slug>          -> lever
+#   - boards.greenhouse.io/<slug>   -> greenhouse
+#   - if neither, leave it out for now (Ashby/Workable scrapers TBD)
+#
+# To remove: just delete the line. The pipeline picks up changes on next run.
+
+greenhouse:
+  - stripe              # payments, big Android team
+  - airbnb
+  - discord
+  - reddit
+  - dropbox
+  - cash                # Block / Cash App
+  - robinhood
+  - affirm
+  - mercury
+  - ramp
+  - brex
+  - plaid
+  - chime
+  - duolingo
+  - gitlab
+  - hashicorp
+  - 1password
+  - mozilla
+  - pinterest
+  - lyft
+  - doordash
+  - instacart
+  - faire
+  - figma
+
+lever:
+  - wise                # formerly TransferWise — strong fintech Android team
+  - revolut
+  - n26
+  - bitpanda
+  - klarna
+  - shopify
+  - notion
+  - vercel
+  - linear
+  - matterport
+  - attentive
+  - netflix
+  - spotify
+  - blockchain
