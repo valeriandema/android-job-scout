@@ -12,7 +12,7 @@ import tempfile
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 import yaml
-from src.matching import Job, extract_salary_usd, passes_filter, score_job
+from src.matching import Job, extract_salary_usd, is_us_only, passes_filter, score_job
 from src.notifier import format_job, pack_into_messages
 from src.state import SeenStore
 
@@ -98,6 +98,45 @@ def test_filtering_and_scoring():
     return ok1 and not ok2 and not ok3 and not ok4 and s > 20
 
 
+def test_us_only_validation():
+    """Sneaky US-only postings that currently pass the loose `remote` check."""
+    cfg = load_cfg()
+
+    sneaky_cases = [
+        ("Remote (US only)", "Great Android role, Kotlin + Compose."),
+        ("Remote", "Must be authorized to work in the United States."),
+        ("Remote - USA", "We hire across all US timezones."),
+        ("Anywhere", "This position is remote within the US."),
+        ("Remote", "Candidates must currently reside in the US."),
+        ("Remote", "US citizens only, W-2 employees."),
+    ]
+    not_us_only_cases = [
+        ("Worldwide · Remote", "Globally distributed team."),
+        ("Europe · Remote", "We're hiring in Europe and EMEA."),
+        # Mentions US auth but overrides with worldwide hiring.
+        ("Remote", "Globally distributed. US candidates must have work authorization in the US."),
+    ]
+
+    ok = True
+    for location, desc in sneaky_cases:
+        flagged = is_us_only(location, desc, cfg)
+        passed, why = passes_filter(
+            Job(source="t", id="x", title="Senior Android Engineer",
+                company="Co", description=desc, location=location, url="x"),
+            cfg,
+        )
+        line = f"  sneaky '{location} | {desc[:40]}': us_only={flagged} passes={passed} why={why}"
+        print(line)
+        ok = ok and flagged and not passed
+
+    for location, desc in not_us_only_cases:
+        flagged = is_us_only(location, desc, cfg)
+        print(f"  legit '{location} | {desc[:40]}': us_only={flagged} (expected False)")
+        ok = ok and not flagged
+
+    return ok
+
+
 def test_formatter():
     cfg = load_cfg()
     j = Job(
@@ -141,6 +180,7 @@ def main():
     results = {
         "salary extraction": test_salary_extraction(),
         "filter + score":    test_filtering_and_scoring(),
+        "us-only guard":     test_us_only_validation(),
         "formatter":         test_formatter(),
         "seen store":        test_seen_store(),
     }

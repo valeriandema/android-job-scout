@@ -46,6 +46,48 @@ location_exclude_hard:     # hard filter if location is ONLY these and nothing g
   - "onsite"
   - "in-office"
 
+# Stronger US-only detection — applied AFTER the simple exclude list above.
+# If any of these regexes match location+description AND no international
+# override signal is present, the job is rejected. Catches sneaky cases like
+# "Remote (US)" or "Must be authorized to work in the United States" where
+# the word "remote" would otherwise let the posting through.
+us_only_patterns:
+  - "\\bu\\.?\\s*s\\.?\\s*(?:only|based|residents?)\\b"
+  - "\\busa\\s*(?:only|based|residents?)\\b"
+  - "\\bunited\\s+states\\s+(?:only|based|residents?)\\b"
+  - "\\bremote\\s*[-–—,(]*\\s*(?:us|u\\.s\\.?|usa|united\\s+states)\\b"
+  - "\\bmust\\s+be\\s+(?:located|based|a\\s+resident|authorized\\s+to\\s+work)\\s+in\\s+(?:the\\s+)?(?:us|u\\.s\\.?a?\\.?|united\\s+states)"
+  - "\\b(?:authorized|authorization|eligible)\\s+to\\s+work\\s+in\\s+(?:the\\s+)?(?:us|united\\s+states)"
+  - "\\blocated\\s+(?:within|in)\\s+(?:the\\s+)?(?:us|united\\s+states)\\b"
+  - "\\b(?:remote|based|working|position|role)\\s+(?:within|in)\\s+(?:the\\s+)?(?:us|united\\s+states)\\b"
+  - "\\banywhere\\s+in\\s+(?:the\\s+)?(?:us|united\\s+states|usa)\\b"
+  - "\\breside\\s+in\\s+(?:the\\s+)?(?:us|united\\s+states)\\b"
+  - "\\bus\\s+citizens?\\b"
+  - "\\bus\\s+work\\s+authorization\\b"
+  - "\\bw-?2\\s+(?:only|employees?)\\b"
+  - "\\bmust\\s+(?:currently\\s+)?reside\\s+in\\s+(?:the\\s+)?(?:us|united\\s+states)"
+
+# Explicit signals that the company hires internationally (override US-only match).
+# Kept separate from `location_must_allow_any` because generic "remote" is too
+# weak — we only override on strong signals of non-US hiring.
+international_override_signals:
+  - "globally distributed"
+  - "hire globally"
+  - "hiring globally"
+  - "global team"
+  - "worldwide"
+  - "anywhere in the world"
+  - "hiring in europe"
+  - "hiring in emea"
+  - "europe-based"
+  - "eu-based"
+  - "europe only"
+  - "eu only"
+  - "emea only"
+  - "anywhere in europe"
+  - "based in europe"
+  - "based in the eu"
+
 # Valerian's technical stack — used for scoring description relevance
 stack_keywords:
   high_value:               # +3 each

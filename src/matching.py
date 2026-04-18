@@ -115,6 +115,38 @@ def passes_title_filter(title: str, cfg: dict) -> bool:
     return True
 
 
+_US_ONLY_RE_CACHE: dict[int, list[re.Pattern[str]]] = {}
+
+
+def _us_only_patterns(cfg: dict) -> list[re.Pattern[str]]:
+    # Compile once per cfg object. Patterns come from config so users can tune them.
+    key = id(cfg)
+    cached = _US_ONLY_RE_CACHE.get(key)
+    if cached is not None:
+        return cached
+    compiled = [re.compile(p, re.IGNORECASE) for p in cfg.get("us_only_patterns", [])]
+    _US_ONLY_RE_CACHE[key] = compiled
+    return compiled
+
+
+def is_us_only(location: str, description: str, cfg: dict) -> bool:
+    """
+    Return True when the posting looks US-only with no signal that the company
+    also hires internationally. Applied after scraping to catch listings that
+    pass the loose `remote` check but are actually restricted to US residents.
+    """
+    text = f"{(location or '').lower()} {(description or '').lower()}"
+    if not text.strip():
+        return False
+    overrides = cfg.get("international_override_signals", [])
+    if _contains_any(text, overrides):
+        return False
+    for rx in _us_only_patterns(cfg):
+        if rx.search(text):
+            return True
+    return False
+
+
 def passes_location_filter(location: str, description: str, cfg: dict) -> bool:
     """
     Location must either explicitly allow remote/EU/worldwide OR be empty/ambiguous
@@ -130,7 +162,15 @@ def passes_location_filter(location: str, description: str, cfg: dict) -> bool:
             return False
 
     # Must mention remote/worldwide/EU somewhere.
-    return _contains_any(combined, cfg["location_must_allow_any"])
+    if not _contains_any(combined, cfg["location_must_allow_any"]):
+        return False
+
+    # Stricter pass: many postings say "Remote" but mean "remote within the US".
+    # Reject unless the description also signals international hiring.
+    if is_us_only(location, description, cfg):
+        return False
+
+    return True
 
 
 def passes_salary_filter(job: Job, cfg: dict) -> bool:
@@ -214,6 +254,8 @@ def passes_filter(job: Job, cfg: dict) -> tuple[bool, str]:
     if not passes_title_filter(job.title, cfg):
         return False, "title filter"
     if not passes_location_filter(job.location, job.description, cfg):
+        if is_us_only(job.location, job.description, cfg):
+            return False, "us-only"
         return False, "location filter"
     if not passes_salary_filter(job, cfg):
         return False, "salary filter"
