@@ -39,7 +39,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           LOG_LEVEL: INFO
         run: |
-          python -m src.main
+          python -m src.master
 
       - name: Commit updated seen-state
         if: always()
