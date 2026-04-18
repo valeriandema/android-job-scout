@@ -1,0 +1,97 @@
+# Android Job Scout — configuration
+# Tuned to Valerian Demichev's profile (11+ yrs, Senior/Lead Android, Kotlin + Compose).
+
+min_salary_usd: 120000
+
+# Title matching — we look for these in job titles
+title_include_any:
+  - "android"
+  - "mobile"          # many fintech roles say "Mobile Engineer" but mean native
+  - "kotlin"
+title_include_preferred:   # bonus score if present
+  - "senior"
+  - "staff"
+  - "lead"
+  - "principal"
+title_exclude_any:         # hard filter
+  - "junior"
+  - "intern"
+  - "graduate"
+  - "entry level"
+  - "entry-level"
+  - "trainee"
+  - "react native"        # not the fit we want
+  - "flutter"
+  - "ios engineer"
+  - "ios developer"
+  - "frontend"
+  - "full stack"
+  - "fullstack"
+  - "backend"
+
+# Location must allow EU remote / not restrict to US-only timezones
+location_must_allow_any:
+  - "remote"
+  - "worldwide"
+  - "anywhere"
+  - "europe"
+  - "emea"
+  - "global"
+location_exclude_hard:     # hard filter if location is ONLY these and nothing global
+  - "us only"
+  - "usa only"
+  - "united states only"
+  - "canada only"
+  - "on-site"
+  - "onsite"
+  - "in-office"
+
+# Valerian's technical stack — used for scoring description relevance
+stack_keywords:
+  high_value:               # +3 each
+    - "kotlin"
+    - "jetpack compose"
+    - "compose"
+    - "clean architecture"
+    - "multi-module"
+    - "dagger"
+    - "hilt"
+    - "coroutines"
+    - "flow"
+  medium_value:             # +2 each
+    - "mvvm"
+    - "mvi"
+    - "retrofit"
+    - "okhttp"
+    - "room"
+    - "realm"
+    - "firebase"
+    - "gitlab ci"
+    - "fastlane"
+    - "sentry"
+  domain_value:             # +2 each (domain match with his CV)
+    - "fintech"
+    - "banking"
+    - "payments"
+    - "video"
+    - "streaming"
+    - "kyc"
+    - "biometric"
+    - "crypto"
+  leadership_value:         # +2 each
+    - "mentoring"
+    - "tech lead"
+    - "code review"
+    - "architecture"
+
+# How many top results to push to Telegram per run
+top_n: 10
+
+# Cache — jobs seen more than N days ago are forgotten (so reposts can re-notify)
+dedup_days: 30
+
+# User-Agent for scrapers
+user_agent: "Mozilla/5.0 (compatible; AndroidJobScout/1.0; +https://github.com/valeriandema)"
+
+# HTTP timeouts
+http_timeout_sec: 30
