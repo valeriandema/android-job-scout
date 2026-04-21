@@ -1,4 +1,212 @@
 {
+  "ashby:notion:67a6ea13-9e71-4e0c-ba9c-999126417a3c": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "In-person collaboration is essential to Notion's culture.",
+    "model": "llama-3.1-8b-instant",
+    "reason": "In-person collaboration is essential to Notion's culture",
+    "validated_at": "2026-04-21T18:14:12.701923+00:00"
+  },
+  "ashby:replit:0170f630-f7c9-4471-8d2f-8c55fb184206": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "In office M,W,F \u00b7 Remote",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Foster City, CA mentioned, and 'Hybrid' implies US-based work",
+    "validated_at": "2026-04-21T18:14:51.720183+00:00"
+  },
+  "ashby:replit:8d9be172-0df0-44ad-a2a5-f72fac887ca0": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "In office M,W,F \u00b7 Remote",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Foster City, CA mentioned, and hybrid work arrangement",
+    "validated_at": "2026-04-21T18:15:12.748766+00:00"
+  },
+  "ashby:replit:8fbbe594-596a-4a4f-844b-dc00111e717f": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "In office M,W,F \u00b7 Remote",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Hybrid role with in-office days",
+    "validated_at": "2026-04-21T18:15:24.621280+00:00"
+  },
+  "ashby:supabase:ad92f53a-6d0f-4761-abc3-588c7c7c6cd8": {
+    "confidence": 1.0,
+    "eligible": true,
+    "evidence_quote": "Location: Remote",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Remote job posting with no geographical restrictions",
+    "validated_at": "2026-04-21T18:15:02.798550+00:00"
+  },
+  "greenhouse:brave:1287724": {
+    "confidence": 1.0,
+    "eligible": true,
+    "evidence_quote": "Remote - Anywhere",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Remote - Anywhere",
+    "validated_at": "2026-04-21T18:14:36.367283+00:00"
+  },
+  "greenhouse:proton:4548812101": {
+    "confidence": 1.0,
+    "eligible": true,
+    "evidence_quote": "millions worldwide",
+    "model": "llama-3.1-8b-instant",
+    "reason": "worldwide",
+    "validated_at": "2026-04-21T18:14:29.166133+00:00"
+  },
+  "greenhouse:proton:4653905101": {
+    "confidence": 0.0,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No mention of remote work or specific locations",
+    "validated_at": "2026-04-21T18:14:19.186897+00:00"
+  },
+  "greenhouse:proton:4750354101": {
+    "confidence": 0.0,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No mention of remote work or specific locations",
+    "validated_at": "2026-04-21T18:14:41.862824+00:00"
+  },
+  "greenhouse:proton:4767418101": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Location is London, no explicit mention of remote work or target region",
+    "validated_at": "2026-04-21T18:14:24.684339+00:00"
+  },
+  "greenhouse:proton:4779872101": {
+    "confidence": 0.0,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No mention of remote work or specific locations",
+    "validated_at": "2026-04-21T18:15:19.116644+00:00"
+  },
+  "greenhouse:speechify:4004980004": {
+    "confidence": 1.0,
+    "eligible": true,
+    "evidence_quote": "Today, nearly 200 people around the globe work on Speechify in a 100% distributed setting \u2013 Speechify has no office.",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Explicitly stated as a 100% distributed setting",
+    "validated_at": "2026-04-21T18:14:01.669622+00:00"
+  },
+  "greenhouse:sumup:7978490002": {
+    "confidence": 1.0,
+    "eligible": false,
+    "evidence_quote": "This role is on-site in Berlin, where face-to-face collaboration is key.",
+    "model": "llama-3.1-8b-instant",
+    "reason": "On-site in Berlin",
+    "validated_at": "2026-04-21T18:14:03.340150+00:00"
+  },
+  "greenhouse:sumup:8003469002": {
+    "confidence": 1.0,
+    "eligible": false,
+    "evidence_quote": "This role is on-site in Berlin, where face-to-face interactions are essential for our team\u2019s success.",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Requires on-site presence in Berlin, Germany",
+    "validated_at": "2026-04-21T18:14:02.563535+00:00"
+  },
+  "greenhouse:sumup:8140988002": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Location is Berlin, Germany",
+    "validated_at": "2026-04-21T18:14:08.294318+00:00"
+  },
+  "greenhouse:sumup:8152684002": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: Cologne, Germany",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Location is Cologne, Germany",
+    "validated_at": "2026-04-21T18:14:04.322988+00:00"
+  },
+  "greenhouse:sumup:8287122002": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: Paris, Paris, France",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Location specified as Paris, France",
+    "validated_at": "2026-04-21T18:14:02.945646+00:00"
+  },
+  "greenhouse:sumup:8309775002": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: Berlin, Germany",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Location is Berlin, Germany",
+    "validated_at": "2026-04-21T18:14:04.669612+00:00"
+  },
+  "greenhouse:sumup:8329105002": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Paris, Paris, France; Paris, Paris, France",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Location is Paris, France",
+    "validated_at": "2026-04-21T18:14:03.721968+00:00"
+  },
+  "greenhouse:sumup:8372327002": {
+    "confidence": 1.0,
+    "eligible": true,
+    "evidence_quote": "worldwide",
+    "model": "llama-3.1-8b-instant",
+    "reason": "worldwide",
+    "validated_at": "2026-04-21T18:14:47.279162+00:00"
+  },
+  "greenhouse:sumup:8458914002": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Location is London, England, which is not explicitly mentioned as a target region",
+    "validated_at": "2026-04-21T18:14:01.999955+00:00"
+  },
+  "greenhouse:sumup:8459127002": {
+    "confidence": 1.0,
+    "eligible": false,
+    "evidence_quote": "The role is based on-site in our office in Berlin.",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Based on-site in Berlin",
+    "validated_at": "2026-04-21T18:15:07.302346+00:00"
+  },
+  "greenhouse:sumup:8491043002": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Location is London, England, United Kingdom",
+    "validated_at": "2026-04-21T18:14:04.916294+00:00"
+  },
+  "greenhouse:sumup:8491045002": {
+    "confidence": 0.0,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Location is specified as Sofia, Bulgaria",
+    "validated_at": "2026-04-21T18:14:04.009324+00:00"
+  },
+  "greenhouse:veriff:8485131002": {
+    "confidence": 1.0,
+    "eligible": true,
+    "evidence_quote": "Spain (Remote), Tallinn",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Explicitly mentions 'Spain (Remote)'",
+    "validated_at": "2026-04-21T18:14:57.326117+00:00"
+  },
+  "lever:qonto:522a932c-8009-4e1a-87b8-970b9d33066b": {
+    "confidence": 1.0,
+    "eligible": true,
+    "evidence_quote": "across 8 European countries",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Mentions 'Europe's leading finance workspace' and '8 European countries'",
+    "validated_at": "2026-04-21T18:14:01.272404+00:00"
+  },
   "remoteok:1131226": {
     "confidence": 0.8,
     "eligible": false,
