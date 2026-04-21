@@ -38,6 +38,7 @@ from .scrapers import (
     workingnomads,
     greenhouse,
     lever,
+    ashby,
 )
 from .state import SeenStore
 
@@ -66,6 +67,7 @@ SCRAPERS = [
     ("workingnomads", workingnomads.fetch),
     ("greenhouse", greenhouse.fetch),
     ("lever", lever.fetch),
+    ("ashby", ashby.fetch),
 ]
 
 

@@ -4,11 +4,13 @@
 # Format: each entry has the ATS slug used in the public board URL.
 #   greenhouse: https://boards-api.greenhouse.io/v1/boards/<slug>/jobs
 #   lever:      https://api.lever.co/v0/postings/<slug>?mode=json
+#   ashby:      https://api.ashbyhq.com/posting-api/job-board/<slug>
 #
 # To add a company: visit their careers page, look at the URL/network tab.
 #   - jobs.lever.co/<slug>          -> lever
 #   - boards.greenhouse.io/<slug>   -> greenhouse
-#   - if neither, leave it out for now (Ashby/Workable scrapers TBD)
+#   - jobs.ashbyhq.com/<slug>       -> ashby
+#   - anything else (Workable/SmartRecruiters/Workday): leave it out for now
 #
 # To remove: just delete the line. The pipeline picks up changes on next run.
 
@@ -31,8 +33,24 @@ greenhouse:
   - instacart
   - faire
   - figma
+  - brave
+  - fingerprint
+  - monzo
+  - proton
+  - speechify
+  - sumup
+  - veriff
 
 lever:
   - attentive
   - netflix
   - spotify
+  - qonto
+
+ashby:
+  - hopper
+  - linear
+  - notion
+  - ramp
+  - replit
+  - supabase
