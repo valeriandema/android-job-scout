@@ -196,6 +196,13 @@ def test_llm_prompt_shape():
         ("Ukraine" in system, "system mentions Ukraine"),
         ("JSON" in system or "json" in system, "system demands JSON"),
         ("eligible" in system, "system specifies eligible key"),
+        # New stricter rules — guard against regressing the prompt.
+        ("Default: eligible=false" in system, "system defaults to deny"),
+        ("EVEN IF every country on the list is European" in system,
+         "system rejects enumerated-EU-only lists"),
+        ("France, Germany, Italy, Spain, and Portugal" in system,
+         "system carries negative example"),
+        ("enumeration wins" in system, "system has conflict rule"),
         (j.title in user, "user carries title"),
         (j.description in user, "user carries description"),
     ]
