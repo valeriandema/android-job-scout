@@ -1,0 +1,10 @@
+{
+  "remoteok:1131226": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "This flexible approach gives team members the best of both worlds: plenty of focus time along with in-person collaboration",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Hybrid working model implies in-person collaboration",
+    "validated_at": "2026-04-21T17:01:48.057511+00:00"
+  }
+}
