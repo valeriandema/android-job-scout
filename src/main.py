@@ -28,6 +28,7 @@ from typing import Iterable
 
 import yaml
 
+from .llm_validator import LLMVerdictCache, validate_ranked
 from .matching import Job, passes_filter, score_job
 from .notifier import format_job, pack_into_messages, send
 from .scrapers import (
@@ -35,8 +36,6 @@ from .scrapers import (
     remotive,
     weworkremotely,
     workingnomads,
-    hackernews,
-    ycombinator,
     greenhouse,
     lever,
 )
@@ -45,6 +44,7 @@ from .state import SeenStore
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 CONFIG_PATH = os.path.join(REPO_ROOT, "config.yaml")
 STATE_PATH = os.path.join(REPO_ROOT, "data", "seen.json")
+LLM_CACHE_PATH = os.path.join(REPO_ROOT, "data", "llm_verdicts.json")
 
 
 def _setup_logging() -> None:
@@ -64,8 +64,6 @@ SCRAPERS = [
     ("remotive", remotive.fetch),
     ("wwr", weworkremotely.fetch),
     ("workingnomads", workingnomads.fetch),
-    ("hn_hiring", hackernews.fetch),
-    ("yc", ycombinator.fetch),
     ("greenhouse", greenhouse.fetch),
     ("lever", lever.fetch),
 ]
@@ -121,7 +119,18 @@ def pipeline(cfg: dict, *, use_state: bool, top_n: int) -> tuple[list[dict], int
         store = None
         unseen = scored
 
-    top = unseen[:top_n]
+    # LLM eligibility gate: walks the ranked list top-down, asks the model
+    # whether each posting is genuinely open to EU/Bulgaria/Ukraine-based
+    # candidates, skips the ones it can't prove eligible. Verdicts are cached
+    # on disk so we don't burn API calls on the same job across runs.
+    llm_cache: LLMVerdictCache | None = None
+    if cfg.get("llm_validation", {}).get("enabled"):
+        llm_cache = LLMVerdictCache(LLM_CACHE_PATH, cfg["dedup_days"])
+    validated = validate_ranked(unseen, cfg, cache=llm_cache, need=top_n)
+    if llm_cache is not None:
+        llm_cache.save()
+
+    top = validated[:top_n]
 
     # Mark them as seen ONLY now, so a failed Telegram send doesn't "lose" them.
     if store is not None:
@@ -152,7 +161,8 @@ def build_messages(top: list[dict], collected: int, after_filter: int, cfg: dict
     blocks: list[str] = []
     for item in top:
         j: Job = item["job"]
-        blocks.append(format_job(j, item["score"], item["reasons"]))
+        blocks.append(format_job(j, item["score"], item["reasons"],
+                                 llm_verdict=item.get("llm_verdict")))
 
     footer = "— end —"
     return pack_into_messages(header, blocks, footer)

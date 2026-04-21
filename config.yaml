@@ -137,3 +137,37 @@ user_agent: "Mozilla/5.0 (compatible; AndroidJobScout/1.0; +https://github.com/v
 
 # HTTP timeouts
 http_timeout_sec: 30
+
+# --------------------------------------------------------------------------
+# LLM-based remote-location validation.
+# After scoring and seen-dedup, we walk the ranked list top-down and ask an
+# LLM whether each posting is genuinely open to a remote candidate based in
+# Europe (Bulgaria) or Ukraine. Jobs that can't be proven eligible are skipped
+# and the next candidate is tried, until top_n validated jobs are collected.
+#
+# Uses any OpenAI-compatible chat endpoint hosting an open-weights model
+# (Groq, OpenRouter, Together, Fireworks, Cloudflare, GitHub Models, ...).
+# The API key is read from the env var named in `api_key_env`.
+# --------------------------------------------------------------------------
+llm_validation:
+  enabled: true
+  provider: "groq"
+  endpoint: "https://api.groq.com/openai/v1/chat/completions"
+  # 8b-instant is plenty for this binary classification task and has a much
+  # higher free-tier TPM ceiling than 70b — fewer 429s per run.
+  model: "llama-3.1-8b-instant"
+  api_key_env: "GROQ_API_KEY"
+  timeout_sec: 30
+  min_confidence: 0.6           # below this => treat as "not proven" => skip
+  # skip   = on LLM error, drop just that job and continue with the next one
+  # pass_through = on LLM error, stop calling but return what's already been
+  #                validated (never the un-validated scored list)
+  # fail   = raise, abort the run (debugging only)
+  on_unavailable: "skip"
+  retry_after_cap_sec: 60       # cap honoring the Retry-After header on 429s
+  target_regions:
+    - "Europe / EU / EEA"
+    - "Bulgaria"
+    - "Ukraine"
+  # Cap how far down the ranked list we're willing to walk before giving up.
+  max_candidates_to_validate: 40

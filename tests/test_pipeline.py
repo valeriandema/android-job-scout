@@ -15,6 +15,15 @@ import yaml
 from src.matching import Job, extract_salary_usd, is_us_only, passes_filter, score_job
 from src.notifier import format_job, pack_into_messages
 from src.state import SeenStore
+from src import llm_validator
+from src.llm_validator import (
+    LLMUnavailable,
+    LLMVerdict,
+    LLMVerdictCache,
+    _parse_response,
+    build_prompt,
+    validate_ranked,
+)
 
 
 def load_cfg():
@@ -176,6 +185,186 @@ def test_seen_store():
         return True
 
 
+def test_llm_prompt_shape():
+    j = Job(source="t", id="1", title="Senior Android Engineer",
+            company="Acme", description="Remote worldwide. Kotlin + Compose.",
+            location="Worldwide", url="x")
+    system, user = build_prompt(j, ["Europe", "Bulgaria", "Ukraine"])
+    ok = True
+    checks = [
+        ("Bulgaria" in system, "system mentions Bulgaria"),
+        ("Ukraine" in system, "system mentions Ukraine"),
+        ("JSON" in system or "json" in system, "system demands JSON"),
+        ("eligible" in system, "system specifies eligible key"),
+        (j.title in user, "user carries title"),
+        (j.description in user, "user carries description"),
+    ]
+    for cond, label in checks:
+        print(f"  prompt check '{label}': {'OK' if cond else 'FAIL'}")
+        ok = ok and cond
+    return ok
+
+
+def test_llm_verdict_parsing():
+    cases = [
+        # (raw content, expected_eligible, expected_confidence_range)
+        ('{"eligible": true, "confidence": 0.9, "reason": "EU-friendly", "evidence_quote": "hiring in EMEA"}',
+         True, (0.9, 0.9)),
+        ('{"eligible": false, "confidence": 0.3, "reason": "silent on geography", "evidence_quote": ""}',
+         False, (0.3, 0.3)),
+        # Wrapped in prose -> regex fallback should still extract JSON
+        ('Here is my verdict:\n{"eligible": true, "confidence": 0.7, "reason": "ok", "evidence_quote": "Europe"}\n',
+         True, (0.7, 0.7)),
+        # Garbage -> fail closed
+        ('not even close to json', False, (0.0, 0.0)),
+        # Missing required key -> fail closed
+        ('{"confidence": 0.9}', False, (0.0, 0.0)),
+        # Out-of-range confidence gets clamped
+        ('{"eligible": true, "confidence": 5, "reason": "", "evidence_quote": ""}',
+         True, (1.0, 1.0)),
+    ]
+    ok = True
+    for raw, exp_elig, (lo, hi) in cases:
+        v = _parse_response(raw, "test-model")
+        elig_ok = v.eligible == exp_elig
+        conf_ok = lo <= v.confidence <= hi
+        label = raw[:40].replace("\n", " ")
+        print(f"  parse '{label}': eligible={v.eligible} conf={v.confidence:.2f} "
+              f"{'OK' if elig_ok and conf_ok else 'FAIL'}")
+        ok = ok and elig_ok and conf_ok
+    return ok
+
+
+def test_llm_cache_roundtrip():
+    with tempfile.TemporaryDirectory() as tmp:
+        path = os.path.join(tmp, "llm_verdicts.json")
+        c1 = LLMVerdictCache(path, dedup_days=30)
+        assert c1.get("src:1") is None
+        v = LLMVerdict(
+            eligible=True, confidence=0.8,
+            reason="global remote", evidence_quote="worldwide",
+            model="test", validated_at="2026-04-19T00:00:00+00:00",
+        )
+        c1.put("src:1", v)
+        c1.save()
+
+        c2 = LLMVerdictCache(path, dedup_days=30)
+        loaded = c2.get("src:1")
+        assert loaded is not None
+        assert loaded.eligible is True
+        assert loaded.confidence == 0.8
+        print("  llm cache round-trip: OK")
+
+        # Entry older than dedup_days should evict on save.
+        c2._data["src:1"]["validated_at"] = "2020-01-01T00:00:00+00:00"
+        c2.save()
+        c3 = LLMVerdictCache(path, dedup_days=30)
+        assert c3.get("src:1") is None
+        print("  llm cache TTL eviction: OK")
+        return True
+
+
+def _fake_llm(verdicts_by_key):
+    """Build a fake call_llm that returns verdicts from a dict, or raises."""
+    def _call(job, cfg_llm):
+        v = verdicts_by_key.get(job.uniq_key())
+        if isinstance(v, Exception):
+            raise v
+        if v is None:
+            raise AssertionError(f"unexpected call for {job.uniq_key()}")
+        return v
+    return _call
+
+
+def test_validator_walks_ranked_list():
+    cfg = {"llm_validation": {"enabled": True, "min_confidence": 0.6,
+                              "max_candidates_to_validate": 10,
+                              "on_unavailable": "skip"}}
+    now = "2026-04-19T00:00:00+00:00"
+    mk = lambda i: {"job": Job(source="t", id=str(i), title="Senior Android Engineer",
+                               company="Co", description="", location="", url="x"),
+                    "score": 10 - i, "reasons": []}
+    scored = [mk(i) for i in range(5)]
+
+    verdicts = {
+        "t:0": LLMVerdict(False, 0.9, "US only", "US residents", "m", now),
+        "t:1": LLMVerdict(True, 0.3, "weak signal", "", "m", now),   # below threshold
+        "t:2": LLMVerdict(True, 0.8, "global", "worldwide", "m", now),
+        "t:3": LLMVerdict(True, 0.75, "EU", "Europe", "m", now),
+        "t:4": LLMVerdict(True, 0.9, "extra", "", "m", now),         # shouldn't be reached
+    }
+    original = llm_validator.call_llm
+    try:
+        llm_validator.call_llm = _fake_llm(verdicts)
+        kept = validate_ranked(scored, cfg, cache=None, need=2)
+    finally:
+        llm_validator.call_llm = original
+
+    ok = (len(kept) == 2
+          and kept[0]["job"].id == "2"
+          and kept[1]["job"].id == "3"
+          and "llm_verdict" in kept[0])
+    print(f"  ranked-walk kept={[k['job'].id for k in kept]} (expected ['2','3']): "
+          f"{'OK' if ok else 'FAIL'}")
+    return ok
+
+
+def test_validator_fallback_policies():
+    now = "2026-04-19T00:00:00+00:00"
+    job = {"job": Job(source="t", id="1", title="Senior Android Engineer",
+                      company="Co", description="", location="", url="x"),
+           "score": 10, "reasons": []}
+    job2 = {"job": Job(source="t", id="2", title="Senior Android Engineer",
+                       company="Co", description="", location="", url="x"),
+            "score": 9, "reasons": []}
+    scored = [job, job2]
+
+    original = llm_validator.call_llm
+    ok = True
+    try:
+        # pass_through: first job validates, second job hits a transient API
+        # error -> we bail but keep the already-validated first job. Never
+        # re-emit un-validated jobs (that was the old bug).
+        llm_validator.call_llm = _fake_llm({
+            "t:1": LLMVerdict(True, 0.9, "global", "worldwide", "m", now),
+            "t:2": LLMUnavailable("boom"),
+        })
+        cfg = {"llm_validation": {"enabled": True, "min_confidence": 0.6,
+                                  "max_candidates_to_validate": 10,
+                                  "on_unavailable": "pass_through"}}
+        kept = validate_ranked(scored, cfg, cache=None, need=5)
+        pt_ok = [k["job"].id for k in kept] == ["1"]
+        print(f"  policy=pass_through kept={[k['job'].id for k in kept]} "
+              f"(expected ['1']): {'OK' if pt_ok else 'FAIL'}")
+        ok = ok and pt_ok
+
+        # skip: API dies on t:1 but succeeds on t:2 with eligible verdict
+        llm_validator.call_llm = _fake_llm({
+            "t:1": LLMUnavailable("boom"),
+            "t:2": LLMVerdict(True, 0.9, "global", "worldwide", "m", now),
+        })
+        cfg["llm_validation"]["on_unavailable"] = "skip"
+        kept = validate_ranked(scored, cfg, cache=None, need=2)
+        skip_ok = len(kept) == 1 and kept[0]["job"].id == "2"
+        print(f"  policy=skip kept={[k['job'].id for k in kept]} (expected ['2']): "
+              f"{'OK' if skip_ok else 'FAIL'}")
+        ok = ok and skip_ok
+
+        # fail: API dies -> exception propagates
+        llm_validator.call_llm = _fake_llm({"t:1": LLMUnavailable("boom")})
+        cfg["llm_validation"]["on_unavailable"] = "fail"
+        raised = False
+        try:
+            validate_ranked(scored, cfg, cache=None, need=2)
+        except LLMUnavailable:
+            raised = True
+        print(f"  policy=fail raised={raised}: {'OK' if raised else 'FAIL'}")
+        ok = ok and raised
+    finally:
+        llm_validator.call_llm = original
+    return ok
+
+
 def main():
     results = {
         "salary extraction": test_salary_extraction(),
@@ -183,6 +372,11 @@ def main():
         "us-only guard":     test_us_only_validation(),
         "formatter":         test_formatter(),
         "seen store":        test_seen_store(),
+        "llm prompt shape":  test_llm_prompt_shape(),
+        "llm parsing":       test_llm_verdict_parsing(),
+        "llm cache":         test_llm_cache_roundtrip(),
+        "llm ranked walk":   test_validator_walks_ranked_list(),
+        "llm fallback":      test_validator_fallback_policies(),
     }
     print()
     for k, v in results.items():

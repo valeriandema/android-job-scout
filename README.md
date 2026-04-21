@@ -13,8 +13,6 @@ Every day at **08:00 UTC** (10:00/11:00 Europe/Sofia), the workflow:
    - Remotive (JSON API)
    - We Work Remotely (RSS)
    - Working Nomads (JSON API)
-   - HackerNews "Ask HN: Who is hiring?" (current month)
-   - Y Combinator "Work at a Startup" (HTML)
    - Curated company list via Greenhouse + Lever public APIs (`companies.yaml`)
 2. Hard-filters on:
    - Title contains `android` / `mobile` / `kotlin`, excludes junior/intern/React Native/iOS/etc.
@@ -101,10 +99,10 @@ Edit `config.yaml` to tune:
 - **Location-aware**: the filter requires explicit worldwide / Europe / EMEA
   allowance, and drops listings scoped to "US only" or "Canada only".
 - **No paid APIs**: aggregator boards (RemoteOK, Remotive, WWR, Working
-  Nomads) plus HN "Who is hiring?" provide broad coverage. The curated
-  `companies.yaml` (Greenhouse + Lever public APIs) provides high-signal
-  coverage of vetted product companies that are known to pay well and
-  hire Android engineers — no scraping defenses to deal with.
+  Nomads) provide broad coverage. The curated `companies.yaml`
+  (Greenhouse + Lever public APIs) provides high-signal coverage of
+  vetted product companies that are known to pay well and hire Android
+  engineers — no scraping defenses to deal with.
 - **Dedup**: persistent `data/seen.json` committed back to the repo,
   so the workflow is stateful across runs without needing external storage.
 
@@ -126,8 +124,6 @@ Edit `config.yaml` to tune:
 │       ├── remotive.py
 │       ├── weworkremotely.py
 │       ├── workingnomads.py
-│       ├── hackernews.py
-│       ├── ycombinator.py
 │       ├── greenhouse.py                   # curated companies on Greenhouse
 │       └── lever.py                        # curated companies on Lever
 └── data/

@@ -37,6 +37,7 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           LOG_LEVEL: INFO
         run: |
           python -m src.main
@@ -46,9 +47,9 @@ jobs:
         run: |
           git config user.name  "android-job-scout[bot]"
           git config user.email "android-job-scout[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain data/seen.json)" ]; then
-            git add data/seen.json
-            git commit -m "chore: update seen-jobs state [skip ci]"
+          if [ -n "$(git status --porcelain data/seen.json data/llm_verdicts.json)" ]; then
+            git add data/seen.json data/llm_verdicts.json
+            git commit -m "chore: update seen-jobs + llm-verdict state [skip ci]"
             git push
           else
             echo "No state changes to commit."

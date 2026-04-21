@@ -38,7 +38,7 @@ def _format_salary(job: Job) -> str:
     return "salary not disclosed"
 
 
-def format_job(job: Job, score: int, reasons: list[str]) -> str:
+def format_job(job: Job, score: int, reasons: list[str], llm_verdict=None) -> str:
     """Format a single job as a Telegram HTML chunk."""
     head = (
         f"<b>{_e(job.title)}</b>\n"
@@ -50,6 +50,11 @@ def format_job(job: Job, score: int, reasons: list[str]) -> str:
     if reasons:
         top_reasons = ", ".join(reasons[:4])
         head += f"\n🎯 <i>{_e(top_reasons)}</i>"
+
+    if llm_verdict is not None:
+        conf_pct = int(round(llm_verdict.confidence * 100))
+        quote = llm_verdict.evidence_quote or llm_verdict.reason
+        head += f'\n🌍 <i>EU/UA eligible ({conf_pct}%) — "{_e(quote[:140])}"</i>'
 
     return head
 
