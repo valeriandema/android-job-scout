@@ -143,6 +143,14 @@
     "reason": "The role is based on-site in our office in Berlin.",
     "validated_at": "2026-04-21T19:07:30.885800+00:00"
   },
+  "greenhouse:sumup:8491043002": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: London, England, United Kingdom",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Restricts to London, England, United Kingdom",
+    "validated_at": "2026-04-22T09:13:48.408067+00:00"
+  },
   "greenhouse:sumup:8491045002": {
     "confidence": 0.0,
     "eligible": false,
@@ -158,6 +166,22 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Specific location mentioned (Tallinn, Spain)",
     "validated_at": "2026-04-21T19:07:00.414489+00:00"
+  },
+  "lever:qonto:63757f85-5f33-4754-9151-e8aba4214d9b": {
+    "confidence": 1.0,
+    "eligible": true,
+    "evidence_quote": "across 8 European countries",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Europe's leading finance workspace",
+    "validated_at": "2026-04-22T09:13:48.058786+00:00"
+  },
+  "lever:qonto:db4c765c-52c1-4ead-8077-bc576d36620d": {
+    "confidence": 1.0,
+    "eligible": true,
+    "evidence_quote": "Europe's leading finance workspace",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Europe's leading finance workspace",
+    "validated_at": "2026-04-22T09:13:48.797223+00:00"
   },
   "remoteok:1131226": {
     "confidence": 0.8,
