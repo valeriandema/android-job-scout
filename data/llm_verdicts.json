@@ -63,6 +63,22 @@
     "reason": "Silent on geography",
     "validated_at": "2026-04-21T19:07:45.758362+00:00"
   },
+  "greenhouse:reddit:7847270": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No geographic signal",
+    "validated_at": "2026-04-24T09:22:53.174871+00:00"
+  },
+  "greenhouse:reddit:7847274": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No geographic signal",
+    "validated_at": "2026-04-24T09:22:53.374956+00:00"
+  },
   "greenhouse:sumup:7978490002": {
     "confidence": 0.8,
     "eligible": false,
