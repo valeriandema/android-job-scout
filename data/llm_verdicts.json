@@ -1,4 +1,12 @@
 {
+  "ashby:notion:59fe8e68-edf9-4da9-9ce0-4d6333ed371f": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "In-person collaboration is essential to Notion's culture. We require all team members to work from our offices on Mondays, Tuesdays, and Thursdays, our designated Anchor Days.",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Requires in-office workdays",
+    "validated_at": "2026-05-07T10:14:02.428010+00:00"
+  },
   "ashby:notion:67a6ea13-9e71-4e0c-ba9c-999126417a3c": {
     "confidence": 0.8,
     "eligible": false,
