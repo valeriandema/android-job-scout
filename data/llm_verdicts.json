@@ -39,6 +39,14 @@
     "reason": "Specific timezone band (Foster City, CA) excludes EET",
     "validated_at": "2026-04-21T19:07:53.223945+00:00"
   },
+  "greenhouse:fingerprint:5991354004": {
+    "confidence": 1.0,
+    "eligible": true,
+    "evidence_quote": "We are a globally dispersed, 100% remote company",
+    "model": "llama-3.1-8b-instant",
+    "reason": "globally dispersed, 100% remote company",
+    "validated_at": "2026-05-09T09:08:20.114910+00:00"
+  },
   "greenhouse:proton:4653905101": {
     "confidence": 0.0,
     "eligible": false,
