@@ -230,5 +230,13 @@
     "model": "llama-3.1-8b-instant",
     "reason": "No geographic signal, but mentions 'in-person collaboration' which implies a physical location",
     "validated_at": "2026-04-21T19:06:18.098303+00:00"
+  },
+  "wwr:https://weworkremotely.com/remote-jobs/c4media-inc-mobile-developer": {
+    "confidence": 1.0,
+    "eligible": true,
+    "evidence_quote": "fully remote, global",
+    "model": "llama-3.1-8b-instant",
+    "reason": "global",
+    "validated_at": "2026-05-10T09:22:39.551168+00:00"
   }
 }
