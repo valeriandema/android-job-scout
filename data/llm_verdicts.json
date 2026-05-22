@@ -1,4 +1,12 @@
 {
+  "ashby:notion:3979a6f5-2abb-447b-bd3a-0565b06bae24": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "In-person collaboration is essential to Notion's culture. We require all team members to work from our offices on Mondays, Tuesdays, and Thursdays, our designated Anchor Days.",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Requires in-office workdays",
+    "validated_at": "2026-05-22T10:41:54.939906+00:00"
+  },
   "ashby:notion:59fe8e68-edf9-4da9-9ce0-4d6333ed371f": {
     "confidence": 0.8,
     "eligible": false,
@@ -6,38 +14,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Requires in-office workdays",
     "validated_at": "2026-05-07T10:14:02.428010+00:00"
-  },
-  "ashby:notion:67a6ea13-9e71-4e0c-ba9c-999126417a3c": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "In-person collaboration is essential to Notion's culture. We require all team members to work from our offices on Mondays, Tuesdays, and Thursdays, our designated Anchor Days.",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Requires in-office workdays",
-    "validated_at": "2026-04-21T19:06:37.371882+00:00"
-  },
-  "ashby:replit:0170f630-f7c9-4471-8d2f-8c55fb184206": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: Foster City, CA (Hybrid) In office M,W,F \u00b7 Remote",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Location is in Foster City, CA, and mentions 'in office M,W,F \u00b7 Remote'",
-    "validated_at": "2026-04-21T19:07:15.060308+00:00"
-  },
-  "ashby:replit:8d9be172-0df0-44ad-a2a5-f72fac887ca0": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: Foster City, CA (Hybrid) In office M,W,F \u00b7 Remote",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific location mentioned (Foster City, CA) and no umbrella term for global hiring",
-    "validated_at": "2026-04-21T19:07:38.335244+00:00"
-  },
-  "ashby:replit:8fbbe594-596a-4a4f-844b-dc00111e717f": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "In office M,W,F \u00b7 Remote",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific timezone band (Foster City, CA) excludes EET",
-    "validated_at": "2026-04-21T19:07:53.223945+00:00"
   },
   "greenhouse:airbnb:7380185": {
     "confidence": 1.0,
@@ -119,38 +95,6 @@
     "reason": "Specific country enumeration excludes Bulgaria and Ukraine",
     "validated_at": "2026-05-20T10:41:55.707331+00:00"
   },
-  "greenhouse:proton:4653905101": {
-    "confidence": 0.0,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal",
-    "validated_at": "2026-04-21T19:06:45.668962+00:00"
-  },
-  "greenhouse:proton:4750354101": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Silent on geography",
-    "validated_at": "2026-04-21T19:07:08.693821+00:00"
-  },
-  "greenhouse:proton:4767418101": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal or umbrella term",
-    "validated_at": "2026-04-21T19:06:53.073993+00:00"
-  },
-  "greenhouse:proton:4779872101": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Silent on geography",
-    "validated_at": "2026-04-21T19:07:45.758362+00:00"
-  },
   "greenhouse:reddit:7488986": {
     "confidence": 0.8,
     "eligible": false,
@@ -182,6 +126,30 @@
     "model": "llama-3.1-8b-instant",
     "reason": "No geographic signal or umbrella term",
     "validated_at": "2026-05-20T10:41:56.683960+00:00"
+  },
+  "greenhouse:reddit:7833378": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No geographic signal",
+    "validated_at": "2026-05-22T10:41:53.998025+00:00"
+  },
+  "greenhouse:reddit:7833379": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No geographic signal or umbrella term",
+    "validated_at": "2026-05-22T10:41:54.528472+00:00"
+  },
+  "greenhouse:reddit:7833380": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: New York City, NY",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No geographic signal, but mentions New York City",
+    "validated_at": "2026-05-22T10:41:53.163319+00:00"
   },
   "greenhouse:reddit:7847270": {
     "confidence": 0.8,
@@ -215,6 +183,14 @@
     "reason": "Restricts to US/Canadian/UK work authorization",
     "validated_at": "2026-05-20T10:42:39.998711+00:00"
   },
+  "greenhouse:stripe:7557403": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Silent on geography",
+    "validated_at": "2026-05-22T10:41:55.715495+00:00"
+  },
   "greenhouse:stripe:7778627": {
     "confidence": 0.0,
     "eligible": false,
@@ -222,102 +198,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "No geographic signal",
     "validated_at": "2026-05-20T10:42:47.430414+00:00"
-  },
-  "greenhouse:sumup:7978490002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "This role is on-site in Berlin, where face-to-face collaboration is key.",
-    "model": "llama-3.1-8b-instant",
-    "reason": "On-site requirement in Berlin",
-    "validated_at": "2026-04-21T19:06:16.564475+00:00"
-  },
-  "greenhouse:sumup:8003469002": {
-    "confidence": 1.0,
-    "eligible": false,
-    "evidence_quote": "This role is on-site in Berlin, where face-to-face interactions are key to our success.",
-    "model": "llama-3.1-8b-instant",
-    "reason": "On-site in Berlin",
-    "validated_at": "2026-04-21T19:06:15.756479+00:00"
-  },
-  "greenhouse:sumup:8140988002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: Berlin, Germany",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Location is Berlin, Germany, and no umbrella term is used",
-    "validated_at": "2026-04-21T19:06:30.014625+00:00"
-  },
-  "greenhouse:sumup:8152684002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: Cologne, Germany",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Location is specified as Cologne, Germany",
-    "validated_at": "2026-04-21T19:06:17.517766+00:00"
-  },
-  "greenhouse:sumup:8287122002": {
-    "confidence": 0.0,
-    "eligible": false,
-    "evidence_quote": "Location: Paris, Paris, France",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific country enumeration without Bulgaria or Ukraine",
-    "validated_at": "2026-04-21T19:06:16.182247+00:00"
-  },
-  "greenhouse:sumup:8309775002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal",
-    "validated_at": "2026-04-21T19:06:23.490706+00:00"
-  },
-  "greenhouse:sumup:8329105002": {
-    "confidence": 0.0,
-    "eligible": false,
-    "evidence_quote": "Paris, Paris, France; Paris, Paris, France",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific country enumeration without Bulgaria or Ukraine",
-    "validated_at": "2026-04-21T19:06:16.940271+00:00"
-  },
-  "greenhouse:sumup:8378568002": {
-    "confidence": 1.0,
-    "eligible": false,
-    "evidence_quote": "The role is based on-site in our office in Berlin.",
-    "model": "llama-3.1-8b-instant",
-    "reason": "The role is based on-site in our office in Berlin.",
-    "validated_at": "2026-04-21T19:07:24.475745+00:00"
-  },
-  "greenhouse:sumup:8458914002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: London, England, United Kingdom",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specifically mentions London, England, UK as a location",
-    "validated_at": "2026-04-21T19:06:15.438974+00:00"
-  },
-  "greenhouse:sumup:8459127002": {
-    "confidence": 1.0,
-    "eligible": false,
-    "evidence_quote": "The role is based on-site in our office in Berlin.",
-    "model": "llama-3.1-8b-instant",
-    "reason": "The role is based on-site in our office in Berlin.",
-    "validated_at": "2026-04-21T19:07:30.885800+00:00"
-  },
-  "greenhouse:sumup:8491043002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: London, England, United Kingdom",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Restricts to London, England, United Kingdom",
-    "validated_at": "2026-04-22T09:13:48.408067+00:00"
-  },
-  "greenhouse:sumup:8491045002": {
-    "confidence": 0.0,
-    "eligible": false,
-    "evidence_quote": "Location: Sofia, Bulgaria",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Location is specified as Sofia, Bulgaria",
-    "validated_at": "2026-04-21T19:06:17.280663+00:00"
   },
   "greenhouse:sumup:8547742002": {
     "confidence": 1.0,
@@ -327,30 +207,6 @@
     "reason": "On-site role in Berlin",
     "validated_at": "2026-05-20T10:42:02.785627+00:00"
   },
-  "greenhouse:veriff:8485132002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: Spain (Remote), Tallinn",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific location mentioned (Tallinn, Spain)",
-    "validated_at": "2026-04-21T19:07:00.414489+00:00"
-  },
-  "lever:qonto:63757f85-5f33-4754-9151-e8aba4214d9b": {
-    "confidence": 1.0,
-    "eligible": true,
-    "evidence_quote": "across 8 European countries",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Europe's leading finance workspace",
-    "validated_at": "2026-04-22T09:13:48.058786+00:00"
-  },
-  "lever:qonto:db4c765c-52c1-4ead-8077-bc576d36620d": {
-    "confidence": 1.0,
-    "eligible": true,
-    "evidence_quote": "Europe's leading finance workspace",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Europe's leading finance workspace",
-    "validated_at": "2026-04-22T09:13:48.797223+00:00"
-  },
   "lever:spotify:22d93997-35ee-4d5b-ad7c-80c5344a4f78": {
     "confidence": 0.8,
     "eligible": false,
@@ -358,14 +214,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "No geographic signal or umbrella term",
     "validated_at": "2026-05-01T09:25:55.437050+00:00"
-  },
-  "remoteok:1131226": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "in-person collaboration that helps foster trust, innovation, and a strong team culture",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal, but mentions 'in-person collaboration' which implies a physical location",
-    "validated_at": "2026-04-21T19:06:18.098303+00:00"
   },
   "wwr:https://weworkremotely.com/remote-jobs/c4media-inc-mobile-developer": {
     "confidence": 1.0,
