@@ -191,22 +191,6 @@
     "reason": "No geographic signal, but mentions New York City",
     "validated_at": "2026-05-22T10:41:53.163319+00:00"
   },
-  "greenhouse:reddit:7847270": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal",
-    "validated_at": "2026-04-24T09:22:53.174871+00:00"
-  },
-  "greenhouse:reddit:7847274": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal",
-    "validated_at": "2026-04-24T09:22:53.374956+00:00"
-  },
   "greenhouse:robinhood:7350823": {
     "confidence": 0.0,
     "eligible": false,
@@ -262,6 +246,14 @@
     "model": "llama-3.1-8b-instant",
     "reason": "On-site in Berlin",
     "validated_at": "2026-05-23T09:43:12.396100+00:00"
+  },
+  "greenhouse:sumup:8140988002": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: Berlin, Germany",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Location is Berlin, Germany, and no umbrella term is used",
+    "validated_at": "2026-05-24T09:47:49.700525+00:00"
   },
   "greenhouse:sumup:8152684002": {
     "confidence": 0.8,
