@@ -127,6 +127,14 @@
     "reason": "Specific country enumeration excludes Bulgaria and Ukraine",
     "validated_at": "2026-05-20T10:41:55.707331+00:00"
   },
+  "greenhouse:proton:4548812101": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: Barcelona; Paris",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Specific country enumeration without Bulgaria or Ukraine",
+    "validated_at": "2026-05-28T11:29:36.173129+00:00"
+  },
   "greenhouse:proton:4653905101": {
     "confidence": 0.8,
     "eligible": false,
