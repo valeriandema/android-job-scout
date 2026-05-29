@@ -79,6 +79,14 @@
     "reason": "US location and no geographic flexibility mentioned",
     "validated_at": "2026-05-21T10:59:23.581102+00:00"
   },
+  "greenhouse:chime:8557625002": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "depending on your location, skills, qualifications, and experience",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Restricts to US/Canada/UK work authorization",
+    "validated_at": "2026-05-29T11:25:26.095766+00:00"
+  },
   "greenhouse:fingerprint:5991354004": {
     "confidence": 1.0,
     "eligible": true,
@@ -126,6 +134,30 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Specific country enumeration excludes Bulgaria and Ukraine",
     "validated_at": "2026-05-20T10:41:55.707331+00:00"
+  },
+  "greenhouse:mozilla:7961360": {
+    "confidence": 1.0,
+    "eligible": false,
+    "evidence_quote": "Remote UK",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Specific timezone mentioned",
+    "validated_at": "2026-05-29T11:25:26.597477+00:00"
+  },
+  "greenhouse:mozilla:7962091": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Remote Germany",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Specific country enumeration",
+    "validated_at": "2026-05-29T11:25:26.809886+00:00"
+  },
+  "greenhouse:mozilla:7962098": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Remote Spain",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Specific country enumeration",
+    "validated_at": "2026-05-29T11:25:26.340942+00:00"
   },
   "greenhouse:proton:4548812101": {
     "confidence": 0.8,
