@@ -391,6 +391,14 @@
     "reason": "Specific location mentioned (Tallinn, Spain)",
     "validated_at": "2026-05-23T09:43:34.659702+00:00"
   },
+  "lever:spotify:22d93997-35ee-4d5b-ad7c-80c5344a4f78": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: London",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No explicit mention of remote work or location flexibility",
+    "validated_at": "2026-06-01T13:28:02.151833+00:00"
+  },
   "wwr:https://weworkremotely.com/remote-jobs/c4media-inc-mobile-developer": {
     "confidence": 1.0,
     "eligible": true,
