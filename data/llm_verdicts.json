@@ -31,6 +31,14 @@
     "reason": "Specifically mentions Foster City, CA, which implies a US timezone and likely US work authorization",
     "validated_at": "2026-05-23T09:44:18.657517+00:00"
   },
+  "ashby:replit:8fbbe594-596a-4a4f-844b-dc00111e717f": {
+    "confidence": 1.0,
+    "eligible": true,
+    "evidence_quote": "With millions of users worldwide,",
+    "model": "llama-3.1-8b-instant",
+    "reason": "worldwide hiring mentioned",
+    "validated_at": "2026-06-03T12:30:31.978953+00:00"
+  },
   "ashby:supabase:ad92f53a-6d0f-4761-abc3-588c7c7c6cd8": {
     "confidence": 1.0,
     "eligible": false,
@@ -174,6 +182,14 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Silent on geography",
     "validated_at": "2026-05-23T09:43:27.238986+00:00"
+  },
+  "greenhouse:proton:4779872101": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Silent on geography",
+    "validated_at": "2026-06-03T12:30:30.944349+00:00"
   },
   "greenhouse:reddit:7488986": {
     "confidence": 0.8,
@@ -398,6 +414,14 @@
     "model": "llama-3.1-8b-instant",
     "reason": "No explicit mention of remote work or location flexibility",
     "validated_at": "2026-06-01T13:28:02.151833+00:00"
+  },
+  "wwr:https://weworkremotely.com/remote-jobs/activate-talent-mobile-app-product-manager": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No geographic signal or umbrella term",
+    "validated_at": "2026-06-03T12:30:31.535093+00:00"
   },
   "wwr:https://weworkremotely.com/remote-jobs/c4media-inc-mobile-developer": {
     "confidence": 1.0,
