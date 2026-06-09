@@ -95,6 +95,14 @@
     "reason": "Restricts to US/Canada/UK work authorization",
     "validated_at": "2026-05-29T11:25:26.095766+00:00"
   },
+  "greenhouse:fingerprint:5991354004": {
+    "confidence": 1.0,
+    "eligible": true,
+    "evidence_quote": "We are a globally dispersed, 100% remote company",
+    "model": "llama-3.1-8b-instant",
+    "reason": "globally dispersed, 100% remote company",
+    "validated_at": "2026-06-09T10:51:42.944573+00:00"
+  },
   "greenhouse:instacart:7901491": {
     "confidence": 0.8,
     "eligible": false,
@@ -430,13 +438,5 @@
     "model": "llama-3.1-8b-instant",
     "reason": "No geographic signal or umbrella term",
     "validated_at": "2026-06-03T12:30:31.535093+00:00"
-  },
-  "wwr:https://weworkremotely.com/remote-jobs/c4media-inc-mobile-developer": {
-    "confidence": 1.0,
-    "eligible": true,
-    "evidence_quote": "fully remote, global",
-    "model": "llama-3.1-8b-instant",
-    "reason": "global",
-    "validated_at": "2026-05-10T09:22:39.551168+00:00"
   }
 }
