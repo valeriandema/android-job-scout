@@ -111,6 +111,22 @@
     "reason": "Restricts to specific Canadian provinces",
     "validated_at": "2026-05-14T10:06:27.022179+00:00"
   },
+  "greenhouse:instacart:7984878": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "ON, AB, BC, or NS Only",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Specific timezone band excludes EET",
+    "validated_at": "2026-06-10T11:30:24.724278+00:00"
+  },
+  "greenhouse:instacart:7985592": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "ON, AB, BC, or NS Only",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Restricts to specific Canadian provinces",
+    "validated_at": "2026-06-10T11:30:24.441524+00:00"
+  },
   "greenhouse:lyft:8378420002": {
     "confidence": 0.0,
     "eligible": false,
