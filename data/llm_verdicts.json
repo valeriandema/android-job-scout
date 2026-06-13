@@ -103,14 +103,6 @@
     "reason": "globally dispersed, 100% remote company",
     "validated_at": "2026-06-09T10:51:42.944573+00:00"
   },
-  "greenhouse:instacart:7901491": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "ON, AB, BC, or NS Only",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Restricts to specific Canadian provinces",
-    "validated_at": "2026-05-14T10:06:27.022179+00:00"
-  },
   "greenhouse:instacart:7984878": {
     "confidence": 0.8,
     "eligible": false,
