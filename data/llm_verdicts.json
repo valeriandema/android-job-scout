@@ -47,30 +47,6 @@
     "reason": "No geographic signal provided",
     "validated_at": "2026-05-23T09:44:03.908903+00:00"
   },
-  "greenhouse:airbnb:7380185": {
-    "confidence": 1.0,
-    "eligible": true,
-    "evidence_quote": "Location: Brazil - Remote",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Remote job posting with no geographic restrictions",
-    "validated_at": "2026-05-20T10:42:32.519823+00:00"
-  },
-  "greenhouse:airbnb:7380262": {
-    "confidence": 1.0,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Silent on geography",
-    "validated_at": "2026-05-20T10:42:25.064139+00:00"
-  },
-  "greenhouse:airbnb:7744247": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: Remote, Brazil",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific timezone mentioned (Brazil)",
-    "validated_at": "2026-05-20T10:42:17.720109+00:00"
-  },
   "greenhouse:brave:1287724": {
     "confidence": 1.0,
     "eligible": true,
@@ -118,38 +94,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Restricts to specific Canadian provinces",
     "validated_at": "2026-06-10T11:30:24.441524+00:00"
-  },
-  "greenhouse:lyft:8378420002": {
-    "confidence": 0.0,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal",
-    "validated_at": "2026-05-20T10:41:56.122258+00:00"
-  },
-  "greenhouse:lyft:8470542002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: Toronto, Canada",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Requires US/Canadian work authorization",
-    "validated_at": "2026-05-20T10:41:57.476895+00:00"
-  },
-  "greenhouse:lyft:8505163002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal or umbrella term",
-    "validated_at": "2026-05-20T10:42:10.374761+00:00"
-  },
-  "greenhouse:mercury:5843845004": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Remote within Canada or United States",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific country enumeration excludes Bulgaria and Ukraine",
-    "validated_at": "2026-05-20T10:41:55.707331+00:00"
   },
   "greenhouse:mozilla:7961360": {
     "confidence": 1.0,
@@ -215,38 +159,6 @@
     "reason": "Silent on geography",
     "validated_at": "2026-06-03T12:30:30.944349+00:00"
   },
-  "greenhouse:reddit:7488986": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Silent on geography",
-    "validated_at": "2026-05-20T10:41:57.226760+00:00"
-  },
-  "greenhouse:reddit:7488988": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Silent on geography",
-    "validated_at": "2026-05-20T10:41:56.343402+00:00"
-  },
-  "greenhouse:reddit:7488991": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal provided",
-    "validated_at": "2026-05-20T10:41:56.907056+00:00"
-  },
-  "greenhouse:reddit:7488992": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal or umbrella term",
-    "validated_at": "2026-05-20T10:41:56.683960+00:00"
-  },
   "greenhouse:reddit:7833378": {
     "confidence": 0.8,
     "eligible": false,
@@ -287,14 +199,6 @@
     "reason": "No geographic signal",
     "validated_at": "2026-05-25T11:43:21.496849+00:00"
   },
-  "greenhouse:robinhood:7350823": {
-    "confidence": 0.0,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Silent on geography",
-    "validated_at": "2026-05-20T10:41:55.476864+00:00"
-  },
   "greenhouse:speechify:4004980004": {
     "confidence": 1.0,
     "eligible": true,
@@ -303,14 +207,6 @@
     "reason": "Explicitly mentions a 100% distributed setting",
     "validated_at": "2026-05-23T09:43:11.718638+00:00"
   },
-  "greenhouse:stripe:7543559": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Restricts to US/Canadian/UK work authorization",
-    "validated_at": "2026-05-20T10:42:39.998711+00:00"
-  },
   "greenhouse:stripe:7557403": {
     "confidence": 0.8,
     "eligible": false,
@@ -318,14 +214,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Silent on geography",
     "validated_at": "2026-05-22T10:41:55.715495+00:00"
-  },
-  "greenhouse:stripe:7778627": {
-    "confidence": 0.0,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal",
-    "validated_at": "2026-05-20T10:42:47.430414+00:00"
   },
   "greenhouse:stripe:7978915": {
     "confidence": 0.8,
@@ -422,14 +310,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Location is specified as Sofia, Bulgaria",
     "validated_at": "2026-05-23T09:43:13.311837+00:00"
-  },
-  "greenhouse:sumup:8547742002": {
-    "confidence": 1.0,
-    "eligible": false,
-    "evidence_quote": "The role is based on-site in our office in Berlin.",
-    "model": "llama-3.1-8b-instant",
-    "reason": "On-site role in Berlin",
-    "validated_at": "2026-05-20T10:42:02.785627+00:00"
   },
   "greenhouse:veriff:8485131002": {
     "confidence": 0.8,
