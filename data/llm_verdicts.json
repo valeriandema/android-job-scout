@@ -1,12 +1,4 @@
 {
-  "ashby:notion:3979a6f5-2abb-447b-bd3a-0565b06bae24": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "In-person collaboration is essential to Notion's culture. We require all team members to work from our offices on Mondays, Tuesdays, and Thursdays, our designated Anchor Days.",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Requires in-office workdays",
-    "validated_at": "2026-05-22T10:41:54.939906+00:00"
-  },
   "ashby:notion:59fe8e68-edf9-4da9-9ce0-4d6333ed371f": {
     "confidence": 0.8,
     "eligible": false,
@@ -62,14 +54,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Unrestricted umbrella term 'Anywhere'",
     "validated_at": "2026-05-23T09:43:42.931625+00:00"
-  },
-  "greenhouse:chime:8535338002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: San Francisco, CA, USA",
-    "model": "llama-3.1-8b-instant",
-    "reason": "US location and no geographic flexibility mentioned",
-    "validated_at": "2026-05-21T10:59:23.581102+00:00"
   },
   "greenhouse:chime:8557625002": {
     "confidence": 0.8,
@@ -183,30 +167,6 @@
     "reason": "Silent on geography",
     "validated_at": "2026-06-03T12:30:30.944349+00:00"
   },
-  "greenhouse:reddit:7833378": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal",
-    "validated_at": "2026-05-22T10:41:53.998025+00:00"
-  },
-  "greenhouse:reddit:7833379": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal or umbrella term",
-    "validated_at": "2026-05-22T10:41:54.528472+00:00"
-  },
-  "greenhouse:reddit:7833380": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: New York City, NY",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal, but mentions New York City",
-    "validated_at": "2026-05-22T10:41:53.163319+00:00"
-  },
   "greenhouse:reddit:7847270": {
     "confidence": 0.8,
     "eligible": false,
@@ -246,14 +206,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Restricts to US/Canadian/UK work authorization",
     "validated_at": "2026-06-20T10:26:59.053928+00:00"
-  },
-  "greenhouse:stripe:7557403": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Silent on geography",
-    "validated_at": "2026-05-22T10:41:55.715495+00:00"
   },
   "greenhouse:stripe:7978915": {
     "confidence": 0.8,
