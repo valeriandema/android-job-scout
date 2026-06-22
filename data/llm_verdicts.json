@@ -1,4 +1,12 @@
 {
+  "ashby:notion:3979a6f5-2abb-447b-bd3a-0565b06bae24": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: New York, New York \u00b7 Remote",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No explicit mention of Bulgaria or Ukraine, and no umbrella term that includes them.",
+    "validated_at": "2026-06-22T13:26:47.341266+00:00"
+  },
   "ashby:notion:59fe8e68-edf9-4da9-9ce0-4d6333ed371f": {
     "confidence": 0.8,
     "eligible": false,
@@ -6,22 +14,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "No explicit mention of remote work location",
     "validated_at": "2026-06-08T12:21:44.204360+00:00"
-  },
-  "ashby:replit:0170f630-f7c9-4471-8d2f-8c55fb184206": {
-    "confidence": 1.0,
-    "eligible": true,
-    "evidence_quote": "With millions of users worldwide,",
-    "model": "llama-3.1-8b-instant",
-    "reason": "worldwide",
-    "validated_at": "2026-05-23T09:43:49.230234+00:00"
-  },
-  "ashby:replit:8d9be172-0df0-44ad-a2a5-f72fac887ca0": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: Foster City, CA \u00b7 Remote",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specifically mentions Foster City, CA, which implies a US timezone and likely US work authorization",
-    "validated_at": "2026-05-23T09:44:18.657517+00:00"
   },
   "ashby:replit:8fbbe594-596a-4a4f-844b-dc00111e717f": {
     "confidence": 1.0,
@@ -31,14 +23,6 @@
     "reason": "worldwide hiring mentioned",
     "validated_at": "2026-06-03T12:30:31.978953+00:00"
   },
-  "ashby:supabase:ad92f53a-6d0f-4761-abc3-588c7c7c6cd8": {
-    "confidence": 1.0,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal provided",
-    "validated_at": "2026-05-23T09:44:03.908903+00:00"
-  },
   "greenhouse:airbnb:7744247": {
     "confidence": 0.8,
     "eligible": false,
@@ -47,13 +31,13 @@
     "reason": "Specific timezone mentioned",
     "validated_at": "2026-06-20T10:26:58.693558+00:00"
   },
-  "greenhouse:brave:1287724": {
-    "confidence": 1.0,
-    "eligible": true,
-    "evidence_quote": "Remote - Anywhere",
+  "greenhouse:chime:8535338002": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: San Francisco, CA, USA",
     "model": "llama-3.1-8b-instant",
-    "reason": "Unrestricted umbrella term 'Anywhere'",
-    "validated_at": "2026-05-23T09:43:42.931625+00:00"
+    "reason": "Location is specified as San Francisco, CA, USA",
+    "validated_at": "2026-06-22T13:26:47.603460+00:00"
   },
   "greenhouse:chime:8557625002": {
     "confidence": 0.8,
@@ -151,14 +135,6 @@
     "reason": "Specific country enumeration without Bulgaria or Ukraine",
     "validated_at": "2026-05-28T11:29:36.173129+00:00"
   },
-  "greenhouse:proton:4653905101": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Silent on geography",
-    "validated_at": "2026-05-23T09:43:27.238986+00:00"
-  },
   "greenhouse:proton:4779872101": {
     "confidence": 0.8,
     "eligible": false,
@@ -166,6 +142,30 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Silent on geography",
     "validated_at": "2026-06-03T12:30:30.944349+00:00"
+  },
+  "greenhouse:reddit:7833378": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No geographic signal",
+    "validated_at": "2026-06-22T13:26:46.867855+00:00"
+  },
+  "greenhouse:reddit:7833379": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No geographic signal",
+    "validated_at": "2026-06-22T13:26:47.085400+00:00"
+  },
+  "greenhouse:reddit:7833380": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: New York City, NY",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No geographic signal, but mentions New York City",
+    "validated_at": "2026-06-22T13:26:46.593807+00:00"
   },
   "greenhouse:reddit:7847270": {
     "confidence": 0.8,
@@ -191,14 +191,6 @@
     "reason": "Silent on geography",
     "validated_at": "2026-06-20T10:26:57.527258+00:00"
   },
-  "greenhouse:speechify:4004980004": {
-    "confidence": 1.0,
-    "eligible": true,
-    "evidence_quote": "Today, nearly 200 people around the globe work on Speechify in a 100% distributed setting \u2013 Speechify has no office.",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Explicitly mentions a 100% distributed setting",
-    "validated_at": "2026-05-23T09:43:11.718638+00:00"
-  },
   "greenhouse:stripe:7543559": {
     "confidence": 0.8,
     "eligible": false,
@@ -206,6 +198,14 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Restricts to US/Canadian/UK work authorization",
     "validated_at": "2026-06-20T10:26:59.053928+00:00"
+  },
+  "greenhouse:stripe:7557403": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Silent on geography",
+    "validated_at": "2026-06-22T13:26:47.892989+00:00"
   },
   "greenhouse:stripe:7978915": {
     "confidence": 0.8,
@@ -223,22 +223,6 @@
     "reason": "Silent on geography",
     "validated_at": "2026-06-06T09:54:00.229262+00:00"
   },
-  "greenhouse:sumup:7978490002": {
-    "confidence": 1.0,
-    "eligible": false,
-    "evidence_quote": "This role is on-site in Berlin, where face-to",
-    "model": "llama-3.1-8b-instant",
-    "reason": "On-site in Berlin",
-    "validated_at": "2026-05-23T09:43:12.820222+00:00"
-  },
-  "greenhouse:sumup:8003469002": {
-    "confidence": 1.0,
-    "eligible": false,
-    "evidence_quote": "This role is on-site in Berlin, where face-to-face interactions are essential for our team\u2019s success.",
-    "model": "llama-3.1-8b-instant",
-    "reason": "On-site in Berlin",
-    "validated_at": "2026-05-23T09:43:12.396100+00:00"
-  },
   "greenhouse:sumup:8140988002": {
     "confidence": 0.8,
     "eligible": false,
@@ -247,62 +231,6 @@
     "reason": "Location is Berlin, Germany, and no umbrella term is used",
     "validated_at": "2026-05-24T09:47:49.700525+00:00"
   },
-  "greenhouse:sumup:8152684002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: Cologne, Germany",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Location specified as Cologne, Germany",
-    "validated_at": "2026-05-23T09:43:13.569070+00:00"
-  },
-  "greenhouse:sumup:8287122002": {
-    "confidence": 1.0,
-    "eligible": false,
-    "evidence_quote": "Paris, Paris, France",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific country enumeration",
-    "validated_at": "2026-05-23T09:43:12.602907+00:00"
-  },
-  "greenhouse:sumup:8329105002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Paris, Paris, France; Paris, Paris, France",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific country enumeration without Bulgaria or Ukraine",
-    "validated_at": "2026-05-23T09:43:13.059379+00:00"
-  },
-  "greenhouse:sumup:8458914002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: London, England, United Kingdom",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specifically mentions London, England, which is in the GMT timezone band",
-    "validated_at": "2026-05-23T09:43:12.089277+00:00"
-  },
-  "greenhouse:sumup:8459127002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "The role is based on-site in our office in Berlin.",
-    "model": "llama-3.1-8b-instant",
-    "reason": "On-site role in Berlin",
-    "validated_at": "2026-05-23T09:44:11.194136+00:00"
-  },
-  "greenhouse:sumup:8491043002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: London, England, United Kingdom",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Restricts to London, England, United Kingdom",
-    "validated_at": "2026-05-23T09:43:19.965414+00:00"
-  },
-  "greenhouse:sumup:8491045002": {
-    "confidence": 0.0,
-    "eligible": false,
-    "evidence_quote": "Location: Sofia, Bulgaria",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Location is specified as Sofia, Bulgaria",
-    "validated_at": "2026-05-23T09:43:13.311837+00:00"
-  },
   "greenhouse:sumup:8547742002": {
     "confidence": 1.0,
     "eligible": false,
@@ -310,22 +238,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "The role is based on-site in our office in Berlin.",
     "validated_at": "2026-06-20T10:26:58.086955+00:00"
-  },
-  "greenhouse:veriff:8485131002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: Spain (Remote), Tallinn",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific location mentioned (Spain, Tallinn)",
-    "validated_at": "2026-05-23T09:43:56.540198+00:00"
-  },
-  "greenhouse:veriff:8485132002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: Spain (Remote), Tallinn",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific location mentioned (Tallinn, Spain)",
-    "validated_at": "2026-05-23T09:43:34.659702+00:00"
   },
   "lever:spotify:22d93997-35ee-4d5b-ad7c-80c5344a4f78": {
     "confidence": 0.8,
