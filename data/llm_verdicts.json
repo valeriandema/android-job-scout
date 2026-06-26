@@ -199,6 +199,22 @@
     "reason": "No geographic signal, but mentions New York City",
     "validated_at": "2026-06-22T13:26:46.593807+00:00"
   },
+  "greenhouse:reddit:7847270": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No geographic signal",
+    "validated_at": "2026-06-26T10:43:44.564074+00:00"
+  },
+  "greenhouse:reddit:7847274": {
+    "confidence": 0.0,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No geographic signal",
+    "validated_at": "2026-06-26T10:43:44.351055+00:00"
+  },
   "greenhouse:robinhood:7350823": {
     "confidence": 0.0,
     "eligible": false,
