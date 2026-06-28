@@ -151,14 +151,6 @@
     "reason": "Restricts to US/Canadian/UK work authorization",
     "validated_at": "2026-06-11T12:03:00.218069+00:00"
   },
-  "greenhouse:proton:4548812101": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: Barcelona; Paris",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific country enumeration without Bulgaria or Ukraine",
-    "validated_at": "2026-05-28T11:29:36.173129+00:00"
-  },
   "greenhouse:proton:4653905101": {
     "confidence": 0.0,
     "eligible": false,
