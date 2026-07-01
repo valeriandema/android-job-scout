@@ -135,6 +135,14 @@
     "reason": "Silent on geography",
     "validated_at": "2026-06-23T10:54:50.578004+00:00"
   },
+  "greenhouse:proton:4767418101": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No geographic signal or umbrella term",
+    "validated_at": "2026-07-01T11:17:20.017645+00:00"
+  },
   "greenhouse:proton:4779872101": {
     "confidence": 0.8,
     "eligible": false,
@@ -286,6 +294,14 @@
     "model": "llama-3.1-8b-instant",
     "reason": "The role is based on-site in our office in Berlin.",
     "validated_at": "2026-06-20T10:26:58.086955+00:00"
+  },
+  "lever:qonto:522a932c-8009-4e1a-87b8-970b9d33066b": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "across 8 European countries",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Specific European countries listed, excluding Bulgaria and Ukraine",
+    "validated_at": "2026-07-01T11:17:19.802171+00:00"
   },
   "lever:spotify:22d93997-35ee-4d5b-ad7c-80c5344a4f78": {
     "confidence": 0.8,
