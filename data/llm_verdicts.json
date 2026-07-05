@@ -23,6 +23,14 @@
     "reason": "Worldwide hiring mentioned",
     "validated_at": "2026-06-23T10:54:57.376041+00:00"
   },
+  "ashby:replit:8fbbe594-596a-4a4f-844b-dc00111e717f": {
+    "confidence": 1.0,
+    "eligible": true,
+    "evidence_quote": "With millions of users worldwide,",
+    "model": "llama-3.1-8b-instant",
+    "reason": "worldwide hiring mentioned",
+    "validated_at": "2026-07-05T10:03:27.375874+00:00"
+  },
   "ashby:supabase:ad92f53a-6d0f-4761-abc3-588c7c7c6cd8": {
     "confidence": 1.0,
     "eligible": false,
@@ -206,14 +214,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Silent on geography",
     "validated_at": "2026-06-22T13:26:47.892989+00:00"
-  },
-  "greenhouse:stripe:7978915": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Silent on geography",
-    "validated_at": "2026-06-04T10:55:02.481870+00:00"
   },
   "greenhouse:stripe:7982720": {
     "confidence": 0.8,
