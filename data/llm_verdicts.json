@@ -286,5 +286,13 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Specific European countries listed, excluding Bulgaria and Ukraine",
     "validated_at": "2026-07-01T11:17:19.802171+00:00"
+  },
+  "lever:spotify:b4ad9572-e20f-4185-a284-99d9740d04f0": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No geographic signal or umbrella term",
+    "validated_at": "2026-07-07T10:45:23.692144+00:00"
   }
 }
