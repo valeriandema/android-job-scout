@@ -135,6 +135,14 @@
     "reason": "Silent on geography",
     "validated_at": "2026-06-23T10:54:50.578004+00:00"
   },
+  "greenhouse:proton:4750354101": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No geographic signal or umbrella term",
+    "validated_at": "2026-07-08T10:07:13.218218+00:00"
+  },
   "greenhouse:proton:4767418101": {
     "confidence": 0.8,
     "eligible": false,
