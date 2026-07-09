@@ -7,14 +7,6 @@
     "reason": "No explicit mention of Bulgaria or Ukraine, and no umbrella term that includes them.",
     "validated_at": "2026-06-22T13:26:47.341266+00:00"
   },
-  "ashby:notion:59fe8e68-edf9-4da9-9ce0-4d6333ed371f": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: New York, New York \u00b7 Remote",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No explicit mention of remote work location",
-    "validated_at": "2026-06-08T12:21:44.204360+00:00"
-  },
   "ashby:replit:0170f630-f7c9-4471-8d2f-8c55fb184206": {
     "confidence": 1.0,
     "eligible": true,
@@ -62,6 +54,22 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Location is specified as San Francisco, CA, USA",
     "validated_at": "2026-06-22T13:26:47.603460+00:00"
+  },
+  "greenhouse:chime:8604565002": {
+    "confidence": 0.0,
+    "eligible": false,
+    "evidence_quote": "Location: New York, NY, USA; San Francisco, CA, USA",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Restricts to US timezone",
+    "validated_at": "2026-07-09T10:45:19.131875+00:00"
+  },
+  "greenhouse:figma:6100023004": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: San Francisco, CA \u2022 New York, NY \u2022 United States",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Restricts to US/Canada",
+    "validated_at": "2026-07-09T10:45:19.460914+00:00"
   },
   "greenhouse:fingerprint:5991354004": {
     "confidence": 1.0,
