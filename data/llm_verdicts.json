@@ -71,21 +71,13 @@
     "reason": "Restricts to US/Canada",
     "validated_at": "2026-07-09T10:45:19.460914+00:00"
   },
-  "greenhouse:instacart:7984878": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "ON, AB, BC, or NS Only",
+  "greenhouse:fingerprint:5991354004": {
+    "confidence": 1.0,
+    "eligible": true,
+    "evidence_quote": "We are a globally dispersed, 100% remote company",
     "model": "llama-3.1-8b-instant",
-    "reason": "Specific timezone band excludes EET",
-    "validated_at": "2026-06-10T11:30:24.724278+00:00"
-  },
-  "greenhouse:instacart:7985592": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "ON, AB, BC, or NS Only",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Restricts to specific Canadian provinces",
-    "validated_at": "2026-06-10T11:30:24.441524+00:00"
+    "reason": "globally dispersed, 100% remote company",
+    "validated_at": "2026-07-11T09:17:29.145233+00:00"
   },
   "greenhouse:lyft:8378420002": {
     "confidence": 0.0,
