@@ -279,6 +279,14 @@
     "reason": "The role is based on-site in our office in Berlin.",
     "validated_at": "2026-06-20T10:26:58.086955+00:00"
   },
+  "greenhouse:sumup:8628481002": {
+    "confidence": 1.0,
+    "eligible": false,
+    "evidence_quote": "The role is based on-site in our office in Berlin.",
+    "model": "llama-3.1-8b-instant",
+    "reason": "On-site role in Berlin",
+    "validated_at": "2026-07-14T09:46:47.057415+00:00"
+  },
   "lever:qonto:522a932c-8009-4e1a-87b8-970b9d33066b": {
     "confidence": 0.8,
     "eligible": false,
