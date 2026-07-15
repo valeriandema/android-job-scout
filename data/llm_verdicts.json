@@ -31,6 +31,22 @@
     "reason": "No geographic signal",
     "validated_at": "2026-06-23T10:55:04.768285+00:00"
   },
+  "greenhouse:affirm:7799933003": {
+    "confidence": 1.0,
+    "eligible": true,
+    "evidence_quote": "We're a full-stack team located entirely in Europe within the same time zone",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Located entirely in Europe within the same time zone",
+    "validated_at": "2026-07-15T09:50:34.574504+00:00"
+  },
+  "greenhouse:affirm:7799935003": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: Remote Spain",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Specific country enumeration (Spain) without Bulgaria or Ukraine",
+    "validated_at": "2026-07-15T09:50:34.826856+00:00"
+  },
   "greenhouse:airbnb:7744247": {
     "confidence": 0.8,
     "eligible": false,
