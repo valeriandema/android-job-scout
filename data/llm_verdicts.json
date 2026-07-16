@@ -318,5 +318,13 @@
     "model": "llama-3.1-8b-instant",
     "reason": "No geographic signal or umbrella term",
     "validated_at": "2026-07-07T10:45:23.692144+00:00"
+  },
+  "wwr:https://weworkremotely.com/remote-jobs/highlevel-product-solution-engineer-mobile-app": {
+    "confidence": 1.0,
+    "eligible": true,
+    "evidence_quote": "We operate in a global, remote-first environment.",
+    "model": "llama-3.1-8b-instant",
+    "reason": "global and remote-first environment",
+    "validated_at": "2026-07-16T09:56:52.178027+00:00"
   }
 }
