@@ -95,6 +95,14 @@
     "reason": "Specific country enumeration with no mention of Bulgaria or Ukraine",
     "validated_at": "2026-07-21T10:14:39.380320+00:00"
   },
+  "greenhouse:monzo:8059557": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: Cardiff, London or Remote (UK)",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Specifically mentions UK and remote in UK, but does not include Bulgaria or Ukraine in the list of locations.",
+    "validated_at": "2026-07-22T10:14:45.965038+00:00"
+  },
   "greenhouse:pinterest:5773689": {
     "confidence": 0.8,
     "eligible": false,
