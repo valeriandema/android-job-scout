@@ -1,12 +1,4 @@
 {
-  "ashby:notion:3979a6f5-2abb-447b-bd3a-0565b06bae24": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: New York, New York \u00b7 Remote",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No explicit mention of Bulgaria or Ukraine, and no umbrella term that includes them.",
-    "validated_at": "2026-06-22T13:26:47.341266+00:00"
-  },
   "ashby:replit:0170f630-f7c9-4471-8d2f-8c55fb184206": {
     "confidence": 1.0,
     "eligible": true,
@@ -55,14 +47,6 @@
     "reason": "Unrestricted umbrella term 'Anywhere'",
     "validated_at": "2026-06-23T10:54:50.806772+00:00"
   },
-  "greenhouse:chime:8535338002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: San Francisco, CA, USA",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Location is specified as San Francisco, CA, USA",
-    "validated_at": "2026-06-22T13:26:47.603460+00:00"
-  },
   "greenhouse:chime:8604565002": {
     "confidence": 0.0,
     "eligible": false,
@@ -102,6 +86,14 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Specifically mentions UK and remote in UK, but does not include Bulgaria or Ukraine in the list of locations.",
     "validated_at": "2026-07-22T10:14:45.965038+00:00"
+  },
+  "greenhouse:pinterest:5432095": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Remote, US",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Restricted to US",
+    "validated_at": "2026-07-23T10:11:22.200632+00:00"
   },
   "greenhouse:pinterest:5773689": {
     "confidence": 0.8,
@@ -167,30 +159,6 @@
     "reason": "Specific location mentioned",
     "validated_at": "2026-07-20T10:40:38.084547+00:00"
   },
-  "greenhouse:reddit:7833378": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal",
-    "validated_at": "2026-06-22T13:26:46.867855+00:00"
-  },
-  "greenhouse:reddit:7833379": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal",
-    "validated_at": "2026-06-22T13:26:47.085400+00:00"
-  },
-  "greenhouse:reddit:7833380": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: New York City, NY",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal, but mentions New York City",
-    "validated_at": "2026-06-22T13:26:46.593807+00:00"
-  },
   "greenhouse:reddit:7847270": {
     "confidence": 0.8,
     "eligible": false,
@@ -222,14 +190,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Restricts to US/Canadian/UK work authorization",
     "validated_at": "2026-07-21T10:14:39.962793+00:00"
-  },
-  "greenhouse:stripe:7557403": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Silent on geography",
-    "validated_at": "2026-06-22T13:26:47.892989+00:00"
   },
   "greenhouse:stripe:7978915": {
     "confidence": 0.8,
