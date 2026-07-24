@@ -1,11 +1,11 @@
 {
-  "ashby:replit:0170f630-f7c9-4471-8d2f-8c55fb184206": {
+  "ashby:notion:3979a6f5-2abb-447b-bd3a-0565b06bae24": {
     "confidence": 1.0,
     "eligible": true,
-    "evidence_quote": "With millions of users worldwide, Replit is democratizing software development by removing traditional barriers to application creation.",
+    "evidence_quote": "Remote",
     "model": "llama-3.1-8b-instant",
-    "reason": "Worldwide hiring mentioned",
-    "validated_at": "2026-06-23T10:54:57.376041+00:00"
+    "reason": "Remote job posting with no geographic restrictions",
+    "validated_at": "2026-07-24T10:07:15.990695+00:00"
   },
   "ashby:replit:8fbbe594-596a-4a4f-844b-dc00111e717f": {
     "confidence": 1.0,
@@ -14,14 +14,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "worldwide hiring mentioned",
     "validated_at": "2026-07-05T10:03:27.375874+00:00"
-  },
-  "ashby:supabase:ad92f53a-6d0f-4761-abc3-588c7c7c6cd8": {
-    "confidence": 1.0,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal",
-    "validated_at": "2026-06-23T10:55:04.768285+00:00"
   },
   "greenhouse:affirm:7799933003": {
     "confidence": 1.0,
@@ -39,13 +31,13 @@
     "reason": "Specific country enumeration (Spain) without Bulgaria or Ukraine",
     "validated_at": "2026-07-15T09:50:34.826856+00:00"
   },
-  "greenhouse:brave:1287724": {
-    "confidence": 1.0,
-    "eligible": true,
-    "evidence_quote": "Remote - Anywhere",
+  "greenhouse:chime:8535338002": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "The actual base salary offered may be higher, depending on your location, skills, qualifications, and experience.",
     "model": "llama-3.1-8b-instant",
-    "reason": "Unrestricted umbrella term 'Anywhere'",
-    "validated_at": "2026-06-23T10:54:50.806772+00:00"
+    "reason": "Requires US location for salary consideration",
+    "validated_at": "2026-07-24T10:07:16.240845+00:00"
   },
   "greenhouse:chime:8604565002": {
     "confidence": 0.0,
@@ -119,14 +111,6 @@
     "reason": "Specific locations mentioned (Barcelona, Paris) without any umbrella term",
     "validated_at": "2026-06-29T12:22:50.594131+00:00"
   },
-  "greenhouse:proton:4653905101": {
-    "confidence": 0.0,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Silent on geography",
-    "validated_at": "2026-06-23T10:54:50.578004+00:00"
-  },
   "greenhouse:proton:4750354101": {
     "confidence": 0.8,
     "eligible": false,
@@ -159,6 +143,30 @@
     "reason": "Specific location mentioned",
     "validated_at": "2026-07-20T10:40:38.084547+00:00"
   },
+  "greenhouse:reddit:7833378": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Silent on geography",
+    "validated_at": "2026-07-24T10:07:15.645145+00:00"
+  },
+  "greenhouse:reddit:7833379": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No geographic signal provided",
+    "validated_at": "2026-07-24T10:07:15.453969+00:00"
+  },
+  "greenhouse:reddit:7833380": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: New York City, NY",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No geographic signal, but mentions New York City",
+    "validated_at": "2026-07-24T10:07:15.179762+00:00"
+  },
   "greenhouse:reddit:7847270": {
     "confidence": 0.8,
     "eligible": false,
@@ -175,14 +183,6 @@
     "reason": "No geographic signal",
     "validated_at": "2026-06-26T10:43:44.351055+00:00"
   },
-  "greenhouse:speechify:4004980004": {
-    "confidence": 1.0,
-    "eligible": true,
-    "evidence_quote": "Today, nearly 200 people around the globe work on Speechify in a 100% distributed setting \u2013 Speechify has no office.",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Remote work setting explicitly mentioned",
-    "validated_at": "2026-06-23T10:54:48.657058+00:00"
-  },
   "greenhouse:stripe:7543559": {
     "confidence": 0.8,
     "eligible": false,
@@ -190,6 +190,14 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Restricts to US/Canadian/UK work authorization",
     "validated_at": "2026-07-21T10:14:39.962793+00:00"
+  },
+  "greenhouse:stripe:7557403": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Silent on geography",
+    "validated_at": "2026-07-24T10:07:16.433707+00:00"
   },
   "greenhouse:stripe:7978915": {
     "confidence": 0.8,
@@ -206,54 +214,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "No geographic signal",
     "validated_at": "2026-07-21T10:14:39.700255+00:00"
-  },
-  "greenhouse:sumup:7978490002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "This role is on-site in Berlin, where face-to-face collaboration is key.",
-    "model": "llama-3.1-8b-instant",
-    "reason": "On-site requirement in Berlin",
-    "validated_at": "2026-06-23T10:54:50.051599+00:00"
-  },
-  "greenhouse:sumup:8003469002": {
-    "confidence": 1.0,
-    "eligible": false,
-    "evidence_quote": "This role is on-site in Berlin, where face-to-face interactions are key to our success.",
-    "model": "llama-3.1-8b-instant",
-    "reason": "On-site in Berlin",
-    "validated_at": "2026-06-23T10:54:49.499815+00:00"
-  },
-  "greenhouse:sumup:8287122002": {
-    "confidence": 0.0,
-    "eligible": false,
-    "evidence_quote": "Location: Paris, Paris, France",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific country enumeration without Bulgaria or Ukraine",
-    "validated_at": "2026-06-23T10:54:49.793373+00:00"
-  },
-  "greenhouse:sumup:8329105002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Paris, Paris, France; Paris, Paris, France",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific country enumeration without Bulgaria or Ukraine",
-    "validated_at": "2026-06-23T10:54:50.358883+00:00"
-  },
-  "greenhouse:sumup:8458914002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: London, England, United Kingdom",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specifically mentions London, England, UK as the location",
-    "validated_at": "2026-06-23T10:54:49.112773+00:00"
-  },
-  "greenhouse:sumup:8459127002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "The role is based on-site in our office in Berlin.",
-    "model": "llama-3.1-8b-instant",
-    "reason": "On-site role in Berlin",
-    "validated_at": "2026-06-23T10:55:12.303174+00:00"
   },
   "greenhouse:sumup:8529499002": {
     "confidence": 0.8,
