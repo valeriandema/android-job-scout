@@ -15,6 +15,14 @@
     "reason": "worldwide hiring mentioned",
     "validated_at": "2026-07-05T10:03:27.375874+00:00"
   },
+  "ashby:supabase:ad92f53a-6d0f-4761-abc3-588c7c7c6cd8": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No geographic signal or umbrella term",
+    "validated_at": "2026-07-25T09:27:38.458369+00:00"
+  },
   "greenhouse:affirm:7799933003": {
     "confidence": 1.0,
     "eligible": true,
