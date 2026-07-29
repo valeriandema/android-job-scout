@@ -263,6 +263,14 @@
     "reason": "No geographic signal or umbrella term",
     "validated_at": "2026-07-07T10:45:23.692144+00:00"
   },
+  "remoteok:1135486": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "We have teams working around the world, with over 20 nationalities from our offices and remotely",
+    "model": "llama-3.1-8b-instant",
+    "reason": "No geographic signal or umbrella term that includes Bulgaria and Ukraine",
+    "validated_at": "2026-07-29T10:30:13.555308+00:00"
+  },
   "wwr:https://weworkremotely.com/remote-jobs/highlevel-product-solution-engineer-mobile-app": {
     "confidence": 1.0,
     "eligible": true,
