@@ -71,6 +71,14 @@
     "reason": "globally dispersed, 100% remote company",
     "validated_at": "2026-07-11T09:17:29.145233+00:00"
   },
+  "greenhouse:instacart:8099277": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "ON, AB, BC, or NS Only",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Restricts to specific Canadian provinces",
+    "validated_at": "2026-08-01T09:49:34.276208+00:00"
+  },
   "greenhouse:mercury:5843845004": {
     "confidence": 0.8,
     "eligible": false,
@@ -118,14 +126,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "No geographic signal or umbrella term",
     "validated_at": "2026-07-08T10:07:13.218218+00:00"
-  },
-  "greenhouse:proton:4767418101": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal or umbrella term",
-    "validated_at": "2026-07-01T11:17:20.017645+00:00"
   },
   "greenhouse:proton:4932164101": {
     "confidence": 0.8,
@@ -183,6 +183,14 @@
     "reason": "No geographic signal or umbrella term",
     "validated_at": "2026-07-28T10:24:01.223185+00:00"
   },
+  "greenhouse:robinhood:8100160": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: Menlo Park, CA; New York, NY",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Specific US locations mentioned",
+    "validated_at": "2026-08-01T09:49:34.050200+00:00"
+  },
   "greenhouse:stripe:7543559": {
     "confidence": 0.8,
     "eligible": false,
@@ -238,14 +246,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "On-site role in Berlin",
     "validated_at": "2026-07-14T09:46:47.057415+00:00"
-  },
-  "lever:qonto:522a932c-8009-4e1a-87b8-970b9d33066b": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "across 8 European countries",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific European countries listed, excluding Bulgaria and Ukraine",
-    "validated_at": "2026-07-01T11:17:19.802171+00:00"
   },
   "lever:spotify:b4ad9572-e20f-4185-a284-99d9740d04f0": {
     "confidence": 0.8,
