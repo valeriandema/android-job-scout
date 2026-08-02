@@ -247,6 +247,14 @@
     "reason": "On-site role in Berlin",
     "validated_at": "2026-07-14T09:46:47.057415+00:00"
   },
+  "lever:qonto:522a932c-8009-4e1a-87b8-970b9d33066b": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "across 8 European countries",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Enumerated specific list of allowed countries",
+    "validated_at": "2026-08-02T09:48:14.700846+00:00"
+  },
   "lever:spotify:b4ad9572-e20f-4185-a284-99d9740d04f0": {
     "confidence": 0.8,
     "eligible": false,
