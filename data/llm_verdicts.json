@@ -1,4 +1,12 @@
 {
+  "ashby:linear:eac7f181-d658-4943-9430-51bae2bcd110": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Today, our team is distributed across North America, Europe, and Australia",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Silent on geography, mentions North America and Australia",
+    "validated_at": "2026-08-04T10:26:54.219713+00:00"
+  },
   "ashby:notion:3979a6f5-2abb-447b-bd3a-0565b06bae24": {
     "confidence": 1.0,
     "eligible": true,
@@ -6,14 +14,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Remote job posting with no geographic restrictions",
     "validated_at": "2026-07-24T10:07:15.990695+00:00"
-  },
-  "ashby:replit:8fbbe594-596a-4a4f-844b-dc00111e717f": {
-    "confidence": 1.0,
-    "eligible": true,
-    "evidence_quote": "With millions of users worldwide,",
-    "model": "llama-3.1-8b-instant",
-    "reason": "worldwide hiring mentioned",
-    "validated_at": "2026-07-05T10:03:27.375874+00:00"
   },
   "ashby:supabase:ad92f53a-6d0f-4761-abc3-588c7c7c6cd8": {
     "confidence": 0.8,
