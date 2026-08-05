@@ -15,6 +15,14 @@
     "reason": "Remote job posting with no geographic restrictions",
     "validated_at": "2026-07-24T10:07:15.990695+00:00"
   },
+  "ashby:replit:8fbbe594-596a-4a4f-844b-dc00111e717f": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: Foster City, CA \u00b7 Remote",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Specifically mentions 'Foster City, CA' and 'Remote' but does not explicitly allow Bulgaria or Ukraine",
+    "validated_at": "2026-08-05T10:25:07.833715+00:00"
+  },
   "ashby:supabase:ad92f53a-6d0f-4761-abc3-588c7c7c6cd8": {
     "confidence": 0.8,
     "eligible": false,
