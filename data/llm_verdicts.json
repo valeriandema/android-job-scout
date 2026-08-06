@@ -215,14 +215,6 @@
     "reason": "Silent on geography",
     "validated_at": "2026-07-24T10:07:16.433707+00:00"
   },
-  "greenhouse:stripe:7978915": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Silent on geography",
-    "validated_at": "2026-07-06T11:55:29.857061+00:00"
-  },
   "greenhouse:stripe:8074125": {
     "confidence": 0.8,
     "eligible": false,
