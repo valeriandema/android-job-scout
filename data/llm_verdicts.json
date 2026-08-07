@@ -103,6 +103,22 @@
     "reason": "Specifically mentions UK and remote in UK, but does not include Bulgaria or Ukraine in the list of locations.",
     "validated_at": "2026-07-22T10:14:45.965038+00:00"
   },
+  "greenhouse:mozilla:8109590": {
+    "confidence": 1.0,
+    "eligible": true,
+    "evidence_quote": "empowering more than 20 million people globally",
+    "model": "llama-3.1-8b-instant",
+    "reason": "open to 'world's most' locations",
+    "validated_at": "2026-08-07T08:46:03.267378+00:00"
+  },
+  "greenhouse:mozilla:8112219": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: Remote Canada",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Restricts to Canada",
+    "validated_at": "2026-08-07T08:46:03.517122+00:00"
+  },
   "greenhouse:pinterest:5432095": {
     "confidence": 0.8,
     "eligible": false,
@@ -191,6 +207,22 @@
     "reason": "No geographic signal or umbrella term",
     "validated_at": "2026-07-28T10:24:01.223185+00:00"
   },
+  "greenhouse:robinhood:8084379": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: Menlo Park, CA; New York, NY",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Specific US locations mentioned",
+    "validated_at": "2026-08-07T08:46:02.765242+00:00"
+  },
+  "greenhouse:robinhood:8084381": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: Toronto, Canada",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Requires US/Canadian work authorization",
+    "validated_at": "2026-08-07T08:46:02.963313+00:00"
+  },
   "greenhouse:robinhood:8100160": {
     "confidence": 0.8,
     "eligible": false,
@@ -214,6 +246,14 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Silent on geography",
     "validated_at": "2026-07-24T10:07:16.433707+00:00"
+  },
+  "greenhouse:stripe:7978915": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Silent on geography",
+    "validated_at": "2026-08-07T08:46:03.715743+00:00"
   },
   "greenhouse:stripe:8074125": {
     "confidence": 0.8,
@@ -254,14 +294,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Enumerated specific list of allowed countries",
     "validated_at": "2026-08-02T09:48:14.700846+00:00"
-  },
-  "lever:spotify:b4ad9572-e20f-4185-a284-99d9740d04f0": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal or umbrella term",
-    "validated_at": "2026-07-07T10:45:23.692144+00:00"
   },
   "remoteok:1135486": {
     "confidence": 0.8,
