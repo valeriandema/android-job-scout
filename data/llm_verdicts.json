@@ -55,22 +55,6 @@
     "reason": "Requires US location for salary consideration",
     "validated_at": "2026-07-24T10:07:16.240845+00:00"
   },
-  "greenhouse:chime:8604565002": {
-    "confidence": 0.0,
-    "eligible": false,
-    "evidence_quote": "Location: New York, NY, USA; San Francisco, CA, USA",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Restricts to US timezone",
-    "validated_at": "2026-07-09T10:45:19.131875+00:00"
-  },
-  "greenhouse:figma:6100023004": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: San Francisco, CA \u2022 New York, NY \u2022 United States",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Restricts to US/Canada",
-    "validated_at": "2026-07-09T10:45:19.460914+00:00"
-  },
   "greenhouse:fingerprint:5991354004": {
     "confidence": 1.0,
     "eligible": true,
