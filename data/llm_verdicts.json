@@ -71,14 +71,6 @@
     "reason": "Restricts to US/Canada",
     "validated_at": "2026-08-10T09:08:47.733092+00:00"
   },
-  "greenhouse:fingerprint:5991354004": {
-    "confidence": 1.0,
-    "eligible": true,
-    "evidence_quote": "We are a globally dispersed, 100% remote company",
-    "model": "llama-3.1-8b-instant",
-    "reason": "globally dispersed, 100% remote company",
-    "validated_at": "2026-07-11T09:17:29.145233+00:00"
-  },
   "greenhouse:instacart:8099277": {
     "confidence": 0.8,
     "eligible": false,
