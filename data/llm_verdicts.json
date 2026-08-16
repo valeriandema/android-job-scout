@@ -31,6 +31,22 @@
     "reason": "No geographic signal or umbrella term",
     "validated_at": "2026-07-25T09:27:38.458369+00:00"
   },
+  "greenhouse:affirm:7799933003": {
+    "confidence": 1.0,
+    "eligible": true,
+    "evidence_quote": "We're a full-stack team located entirely in Europe within the same time zone",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Located entirely in Europe within the same time zone",
+    "validated_at": "2026-08-16T08:17:05.848038+00:00"
+  },
+  "greenhouse:affirm:7799935003": {
+    "confidence": 0.8,
+    "eligible": false,
+    "evidence_quote": "Location: Remote Spain",
+    "model": "llama-3.1-8b-instant",
+    "reason": "Specific country enumeration (Spain) without Bulgaria or Ukraine",
+    "validated_at": "2026-08-16T08:17:05.528548+00:00"
+  },
   "greenhouse:affirm:7829429003": {
     "confidence": 0.8,
     "eligible": false,
@@ -294,13 +310,5 @@
     "model": "llama-3.1-8b-instant",
     "reason": "No geographic signal or umbrella term that includes Bulgaria and Ukraine",
     "validated_at": "2026-07-29T10:30:13.555308+00:00"
-  },
-  "wwr:https://weworkremotely.com/remote-jobs/highlevel-product-solution-engineer-mobile-app": {
-    "confidence": 1.0,
-    "eligible": true,
-    "evidence_quote": "We operate in a global, remote-first environment.",
-    "model": "llama-3.1-8b-instant",
-    "reason": "global and remote-first environment",
-    "validated_at": "2026-07-16T09:56:52.178027+00:00"
   }
 }
