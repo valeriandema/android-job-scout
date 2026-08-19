@@ -143,14 +143,6 @@
     "reason": "Restricted to US",
     "validated_at": "2026-07-23T10:11:22.200632+00:00"
   },
-  "greenhouse:pinterest:5773689": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: Toronto, ON, CA",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Restricts to US/Canadian/UK work authorization",
-    "validated_at": "2026-07-19T09:44:29.024219+00:00"
-  },
   "greenhouse:pinterest:7987854": {
     "confidence": 0.8,
     "eligible": false,
