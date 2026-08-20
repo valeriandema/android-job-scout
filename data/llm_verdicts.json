@@ -151,22 +151,6 @@
     "reason": "Restricts to US/Canadian/UK work authorization",
     "validated_at": "2026-08-14T08:58:03.597513+00:00"
   },
-  "greenhouse:proton:4932164101": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: London, Title: Senior Android Software Engineer - London",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific location mentioned",
-    "validated_at": "2026-07-20T10:40:37.850773+00:00"
-  },
-  "greenhouse:proton:4932186101": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: Geneva, Title: Senior Android Software Engineer - Geneva",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific location mentioned",
-    "validated_at": "2026-07-20T10:40:38.084547+00:00"
-  },
   "greenhouse:reddit:7833378": {
     "confidence": 0.8,
     "eligible": false,
