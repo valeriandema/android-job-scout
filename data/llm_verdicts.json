@@ -103,14 +103,6 @@
     "reason": "No geographic signal",
     "validated_at": "2026-08-08T08:27:52.477742+00:00"
   },
-  "greenhouse:mercury:5843845004": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "San Francisco, CA, New York, NY, Portland, OR, or Remote within Canada or United States",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific country enumeration with no mention of Bulgaria or Ukraine",
-    "validated_at": "2026-07-21T10:14:39.380320+00:00"
-  },
   "greenhouse:monzo:8059557": {
     "confidence": 0.8,
     "eligible": false,
@@ -215,14 +207,6 @@
     "reason": "Specific US locations mentioned",
     "validated_at": "2026-08-01T09:49:34.050200+00:00"
   },
-  "greenhouse:stripe:7543559": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Restricts to US/Canadian/UK work authorization",
-    "validated_at": "2026-07-21T10:14:39.962793+00:00"
-  },
   "greenhouse:stripe:7557403": {
     "confidence": 0.8,
     "eligible": false,
@@ -239,14 +223,6 @@
     "reason": "Silent on geography",
     "validated_at": "2026-08-07T08:46:03.715743+00:00"
   },
-  "greenhouse:stripe:8074125": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal",
-    "validated_at": "2026-07-21T10:14:39.700255+00:00"
-  },
   "greenhouse:stripe:8074127": {
     "confidence": 0.8,
     "eligible": false,
@@ -254,14 +230,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "No geographic signal",
     "validated_at": "2026-07-28T10:24:01.469753+00:00"
-  },
-  "greenhouse:sumup:8529499002": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal provided",
-    "validated_at": "2026-07-21T10:14:39.130720+00:00"
   },
   "lever:qonto:522a932c-8009-4e1a-87b8-970b9d33066b": {
     "confidence": 0.8,
