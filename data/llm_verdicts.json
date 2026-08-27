@@ -103,22 +103,6 @@
     "reason": "Restricts to US/Canadian/UK work authorization",
     "validated_at": "2026-08-14T08:58:03.597513+00:00"
   },
-  "greenhouse:reddit:7847270": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal",
-    "validated_at": "2026-07-28T10:24:01.007949+00:00"
-  },
-  "greenhouse:reddit:7847274": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal or umbrella term",
-    "validated_at": "2026-07-28T10:24:01.223185+00:00"
-  },
   "greenhouse:robinhood:8084379": {
     "confidence": 0.8,
     "eligible": false,
@@ -150,14 +134,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Silent on geography",
     "validated_at": "2026-08-07T08:46:03.715743+00:00"
-  },
-  "greenhouse:stripe:8074127": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "No geographic signal",
-    "validated_at": "2026-07-28T10:24:01.469753+00:00"
   },
   "lever:qonto:522a932c-8009-4e1a-87b8-970b9d33066b": {
     "confidence": 0.8,
