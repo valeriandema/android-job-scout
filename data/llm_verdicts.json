@@ -63,14 +63,6 @@
     "reason": "globally dispersed, 100% remote company",
     "validated_at": "2026-08-12T09:01:13.274062+00:00"
   },
-  "greenhouse:instacart:8099277": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "ON, AB, BC, or NS Only",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Restricts to specific Canadian provinces",
-    "validated_at": "2026-08-01T09:49:34.276208+00:00"
-  },
   "greenhouse:lyft:8680013002": {
     "confidence": 0.0,
     "eligible": false,
@@ -118,14 +110,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Requires US/Canadian work authorization",
     "validated_at": "2026-08-07T08:46:02.963313+00:00"
-  },
-  "greenhouse:robinhood:8100160": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: Menlo Park, CA; New York, NY",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific US locations mentioned",
-    "validated_at": "2026-08-01T09:49:34.050200+00:00"
   },
   "greenhouse:stripe:7978915": {
     "confidence": 0.8,
