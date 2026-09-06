@@ -55,22 +55,6 @@
     "reason": "No geographic signal",
     "validated_at": "2026-08-08T08:27:52.477742+00:00"
   },
-  "greenhouse:mozilla:8109590": {
-    "confidence": 1.0,
-    "eligible": true,
-    "evidence_quote": "empowering more than 20 million people globally",
-    "model": "llama-3.1-8b-instant",
-    "reason": "open to 'world's most' locations",
-    "validated_at": "2026-08-07T08:46:03.267378+00:00"
-  },
-  "greenhouse:mozilla:8112219": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: Remote Canada",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Restricts to Canada",
-    "validated_at": "2026-08-07T08:46:03.517122+00:00"
-  },
   "greenhouse:pinterest:7987854": {
     "confidence": 0.8,
     "eligible": false,
@@ -78,30 +62,6 @@
     "model": "llama-3.1-8b-instant",
     "reason": "Restricts to US/Canadian/UK work authorization",
     "validated_at": "2026-08-14T08:58:03.597513+00:00"
-  },
-  "greenhouse:robinhood:8084379": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: Menlo Park, CA; New York, NY",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Specific US locations mentioned",
-    "validated_at": "2026-08-07T08:46:02.765242+00:00"
-  },
-  "greenhouse:robinhood:8084381": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "Location: Toronto, Canada",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Requires US/Canadian work authorization",
-    "validated_at": "2026-08-07T08:46:02.963313+00:00"
-  },
-  "greenhouse:stripe:7978915": {
-    "confidence": 0.8,
-    "eligible": false,
-    "evidence_quote": "",
-    "model": "llama-3.1-8b-instant",
-    "reason": "Silent on geography",
-    "validated_at": "2026-08-07T08:46:03.715743+00:00"
   },
   "lever:spotify:b4ad9572-e20f-4185-a284-99d9740d04f0": {
     "confidence": 0.8,
